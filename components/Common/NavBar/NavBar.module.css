@@ -1,0 +1,144 @@
+.navbar-wrapper {
+    position: relative;
+    margin-bottom: 50px;
+}
+.nav-li {
+    list-style-type: none;
+    color: #c4cee9;
+    margin-right: 25px;
+    font-size: 20px;
+}
+.navbar-three-line {
+    cursor: pointer;
+    width: 50px;
+    margin-top: 15px;
+}
+.nav-menu-smaller-screen {
+    position: absolute;
+    z-index: 100000;
+    background-color: #0a192f;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+}
+.navli-smaller-screen {
+    margin-right: 45px;
+    list-style-type: none;
+    padding: 10px;
+    color: #c4cee9;
+}
+.btn-resume {
+    cursor: pointer;
+    color: #00ffc2;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid #00ffc2;
+    background-color: transparent;
+    transition: all 500ms ease;
+}
+.btn-resume:hover {
+    color: #ffffff;
+    background: linear-gradient(47deg, rgba(44, 117, 253, 1) 0%, rgba(60, 255, 208, 1) 100%);
+}
+
+/* New */
+
+.socialmeadia-icons-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 80px;
+    left: 20px;
+}
+
+.logo {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition-duration: 0.5s;
+    z-index: 10000;
+}
+.logo:hover {
+    transform: translateY(-4px);
+}
+.left-bar {
+    content: '';
+    width: 61px;
+    height: 2px;
+    transform: rotate(90deg);
+    background-color: #c4cee9;
+    position: fixed;
+    bottom: 26px;
+    left: 0px;
+}
+.email {
+    cursor: pointer;
+    float: right;
+    transform: rotate(90deg);
+    position: fixed;
+    bottom: 149px;
+    right: -85px;
+    color: #c4cee9;
+    transition-duration: 0.3s;
+    z-index: 100;
+}
+.email:hover {
+    /* transform: translateX(-3px); */
+    color: #18ffc9;
+    position: fixed;
+    bottom: 155px;
+    right: -85px;
+}
+.right-bar {
+    content: '';
+    width: 61px;
+    height: 2px;
+    transform: rotate(90deg);
+    background-color: #c4cee9;
+    float: right;
+    position: fixed;
+    bottom: 26px;
+    right: -13px;
+    z-index: 100;
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+/* .a {
+    transition-duration: 0.3s;
+    z-index: 100;
+} */
+
+/* =========================== Media query breakpoints ========================== */
+
+/* lg, large: 1200px */
+@media (min-width: 1200px) {
+}
+
+/* xl, extra-large: 1536px */
+@media (min-width: 1536px) {
+}

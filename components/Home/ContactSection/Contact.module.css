@@ -1,0 +1,45 @@
+.contact-wrapper {
+    margin-bottom: 100px;
+}
+.contact-heading {
+    margin: 0;
+    white-space: pre;
+    text-align: center;
+}
+.inputbox {
+    background-color: transparent;
+    color: #c4cee9;
+    border: 1px solid #00ffc2;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+.inputbox:focus {
+    outline: none;
+}
+
+.description {
+    margin-top: 25px;
+    color: #c4cee9;
+    text-align: center;
+}
+
+/* =========================== Media query breakpoints ========================== */
+
+/* sm, small: 600px */
+@media (min-width: 600px) {
+}
+/* md, medium: 900px */
+@media (min-width: 900px) {
+    .description {
+        text-align: left;
+    }
+}
+/* lg, large: 1200px */
+@media (min-width: 1200px) {
+}
+
+/* xl, extra-large: 1536px */
+@media (min-width: 1536px) {
+}

@@ -1,0 +1,138 @@
+.skill-wrapper {
+}
+.skill-heading {
+    color: #c4cee9;
+    font-size: 50px;
+}
+.bar {
+    position: relative;
+}
+.bar::after {
+    content: ' ';
+    width: 50px;
+    height: 3px;
+    background-color: #c4cee9;
+    position: absolute;
+    top: 36px;
+    right: -58px;
+}
+.right-bar {
+    width: 101px;
+    height: 3px;
+    background-color: #c4cee9;
+    position: relative;
+    top: -42px;
+    right: -52px;
+}
+.description {
+    color: #c4cee9;
+}
+.highlight-description {
+    cursor: pointer;
+    color: #00ffc2;
+}
+.skills {
+    text-transform: capitalize;
+    display: block;
+    padding-bottom: 8px;
+    color: #c4cee9;
+}
+
+.container {
+    width: 100%;
+    height: 230px;
+    position: relative;
+    transition-duration: 0.5s;
+    --m: 16px;
+}
+.container:hover {
+    --m: 10px;
+}
+.box1 {
+    width: 100%;
+    height: 100%;
+    /* padding: 10px; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #173258;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+    /* opacity: 0.8;  */
+}
+.box2 {
+    /* background-image: url(data:image/png;base64,); */
+    background-color: #173258;
+    width: 100%;
+    height: 100%;
+    padding: 20px 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+
+    /* opacity: 0.8;  */
+}
+.stack-top {
+    /* z-index: 9; */
+    margin: var(--m);
+}
+
+.desingnation {
+    color: #c4cee9;
+    font-size: 25px;
+    margin: 0;
+}
+.company-name {
+    margin: 0;
+    color: #c4cee9;
+    font-size: 20px;
+    padding: 8px 0;
+
+    /* display: inline-block; */
+}
+.duration {
+    padding: 10px 0;
+    color: #838383;
+    /* font-size: 20px; */
+}
+.description {
+    margin: 0;
+    padding: 15px 0;
+    color: #c4cee9;
+    font-size: 18px;
+}
+
+/* =========================== Media query breakpoints ========================== */
+
+/* sm, small: 600px */
+@media (min-width: 600px) {
+    .bar::after {
+        width: 88px;
+        top: 45px;
+        right: -100px;
+    }
+    .container {
+        width: 100%;
+        height: 200px;
+    }
+}
+/* md, medium: 900px */
+@media (min-width: 900px) {
+    .skill-wrapper {
+        margin-bottom: 100px;
+    }
+    .bar::after {
+        width: 100px;
+        top: 54px;
+        right: -115px;
+    }
+}
+/* lg, large: 1200px */
+@media (min-width: 1200px) {
+}
+
+/* xl, extra-large: 1536px */
+@media (min-width: 1536px) {
+}
