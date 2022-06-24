@@ -32,7 +32,7 @@ export default function About() {
                         <div className={style.container}>
                             <div className={`${style.box1} ${style['stack-top']}`}></div>
                             <div className={`${style.box2}`}>
-                                <img src={`${BASE_URL}/images/img3.jpeg`} alt="codepen-logo" className={style['img']} />
+                                <img src={`/images/img3.jpeg`} alt="my-img" className={style['img']} />
                             </div>
                         </div>
                     </Grid>

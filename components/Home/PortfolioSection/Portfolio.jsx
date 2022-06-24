@@ -17,7 +17,7 @@ export default function Portfolio() {
                 </div>
                 <Grid container spacing={3} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Grid item xs={12} sm={12} md={5} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <img src={`${BASE_URL}/images/project1.svg`} alt="project1" className={style['project-img']} />
+                        <img src={`/images/project1.svg`} alt="project1" className={style['project-img']} />
                     </Grid>
                     <Grid item xs={12} sm={12} md={7} className={style['portfolio-right-container']}>
                         <span className={style['portfolio-feature-project']}>Featured&nbsp;Project</span>
@@ -31,7 +31,7 @@ export default function Portfolio() {
                     {/* left side content right side image */}
                     <Box sx={{ display: { xs: 'block', sm: 'block', md: 'none' }, mt: 4 }}>
                         <Grid item xs={12} sm={12} md={5} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}>
-                            <img src={`${BASE_URL}/images/project2.svg`} alt="project2" className={style['project-img']} />
+                            <img src={`/images/project2.svg`} alt="project2" className={style['project-img']} />
                         </Grid>
                     </Box>
                     <Grid item xs={12} sm={12} md={7} className={style['portfolio-left-container']}>
@@ -45,12 +45,12 @@ export default function Portfolio() {
                     </Grid>
                     <Box sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
                         <Grid item xs={12} sm={12} md={5} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}>
-                            <img src={`${BASE_URL}/images/project2.svg`} alt="project2" className={style['project-img']} />
+                            <img src={`/images/project2.svg`} alt="project2" className={style['project-img']} />
                         </Grid>
                     </Box>
 
                     <Grid item xs={12} sm={12} md={5} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <img src={`${BASE_URL}/images/project3.svg`} alt="project3" className={style['project-img']} />
+                        <img src={`/images/project3.svg`} alt="project3" className={style['project-img']} />
                     </Grid>
                     <Grid item xs={12} sm={12} md={7} className={style['portfolio-right-container']} sx={{ mb: 2 }}>
                         <span className={style['portfolio-feature-project']}>Featured&nbsp;Project</span>

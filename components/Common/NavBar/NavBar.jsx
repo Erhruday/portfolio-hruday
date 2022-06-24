@@ -19,19 +19,9 @@ export default function NavBar() {
             <Grid container sx={{ pr: 5, pl: { xs: 2, sm: 5 }, mt: 3 }}>
                 <Grid item xs={1} sx={{ display: { xs: 'block', sm: 'none', md: 'none' } }}>
                     {navbarExpandIsToggle ? (
-                        <img
-                            src={`${BASE_URL}/images/cross-line.svg`}
-                            alt="cross"
-                            className={style['navbar-three-line']}
-                            onClick={() => setNavbarExpandIsToggle(false)}
-                        />
+                        <img src={`/images/cross-line.svg`} alt="cross" className={style['navbar-three-line']} onClick={() => setNavbarExpandIsToggle(false)} />
                     ) : (
-                        <img
-                            src="${BASE_URL}/images/three-line.svg"
-                            alt="logo"
-                            className={style['navbar-three-line']}
-                            onClick={() => setNavbarExpandIsToggle(true)}
-                        />
+                        <img src={`/images/three-line.svg`} alt="logo" className={style['navbar-three-line']} onClick={() => setNavbarExpandIsToggle(true)} />
                     )}
                 </Grid>
                 <Grid item xs={10} sm={4} sx={{ display: 'flex', alignItems: 'center', justifyContent: { xs: 'center', sm: 'flex-start' } }}>
@@ -71,7 +61,7 @@ export default function NavBar() {
                     </ul>
                 </Grid>
                 <Grid item xs={1} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <a href={`${BASE_URL}/images/resume-hruday.pdf`} download="resume-hruday">
+                    <a href={`/images/resume-hruday.pdf`} download="resume-hruday">
                         <button className={style['btn-resume']}>Resume</button>
                     </a>
                 </Grid>
