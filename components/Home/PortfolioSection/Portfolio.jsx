@@ -67,7 +67,7 @@ export default function Portfolio() {
                     <span></span>
                     <span></span>
                     <span></span>
-                    Learn&nbsp;More
+                    See&nbsp;More!
                 </a>
             </Container>
         </div>

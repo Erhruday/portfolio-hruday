@@ -33,7 +33,7 @@ export default function Footer() {
     };
     return (
         <div className={style['footer-wrapper']}>
-            <Container maxWidth="md" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <Container maxWidth="lg" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
                 <Box sx={{ display: { xs: 'block', sm: 'block', md: 'none' } }}>
                     <div className={style['socialmeadia-icons-container']}>
                         <a href="https://github.com/Erhruday/Hello-World" target={'_blank'} rel="noreferrer" className={style.a}>
@@ -49,15 +49,11 @@ export default function Footer() {
                             <Twitter dynamicClass={`${style['socialmeadia-icon']}`} />
                         </a>
                         <a href="https://codepen.io/hruday-ranjan/pens/public" target={'_blank'} rel="noreferrer" className={style.a}>
-                            {/* <img src={`${BASE_URL}/images/codepen.svg`} alt="codepen-logo" className={style['socialmeadia-icon']} /> */}
                             <Codepen dynamicClass={`${style['socialmeadia-icon']}`} />
                         </a>
                     </div>
                 </Box>
-
                 <p className={style.description}>Designed & Built by Hruday Ranjan</p>
-
-                {/* <img className={style.logo} src={`${BASE_URL}/images/portfolio-logo.png`} alt="logo" /> */}
                 <Logo dynamicClass={`${style['logo']}`} />
             </Container>
 

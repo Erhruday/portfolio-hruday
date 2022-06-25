@@ -75,7 +75,7 @@ export default function Blog() {
                         <span></span>
                         <span></span>
                         <span></span>
-                        Show&nbsp;More
+                        See&nbsp;More!
                     </a>
                 </div>
             </Container>

@@ -2,12 +2,12 @@ import { useState } from 'react';
 
 export default function Codepen({ dynamicClass }) {
     const [fill, setFill] = useState('C4CEE9');
-    const onMouseEnterHandler = () => {
-        setFill('18ffc9');
-    };
-    const onMouseLeaveHandler = () => {
-        setFill('C4CEE9');
-    };
+    // const onMouseEnterHandler = () => {
+    //     setFill('18ffc9');
+    // };
+    // const onMouseLeaveHandler = () => {
+    //     setFill('C4CEE9');
+    // };
     return (
         <>
             <svg
@@ -15,8 +15,8 @@ export default function Codepen({ dynamicClass }) {
                 width="32"
                 height="32"
                 viewBox="0 0 32 32"
-                onMouseOver={onMouseEnterHandler}
-                onMouseLeave={onMouseLeaveHandler}
+                onMouseOver={() => setFill('18ffc9')}
+                onMouseLeave={() => setFill('C4CEE9')}
                 xmlns="http://www.w3.org/2000/svg"
             >
                 <path

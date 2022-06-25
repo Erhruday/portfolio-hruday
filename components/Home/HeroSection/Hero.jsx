@@ -40,7 +40,7 @@ export default function Hero() {
                             <h1 className={`${style['hero-heading']} ${style['heading2']}`}>.</h1>
                         </div>
                         <p className={style['hero-sub-heading']}>FRONTEND ENTHUSIAST</p>
-                        <a href="#" className="btn">
+                        <a href="#contact-form" className="btn">
                             <span></span>
                             <span></span>
                             <span></span>

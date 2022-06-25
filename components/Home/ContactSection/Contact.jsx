@@ -5,7 +5,7 @@ const Grid = dynamic(() => import('@mui/material/Grid/Grid'), { ssr: false });
 
 export default function Contact() {
     return (
-        <div className={style['contact-wrapper']}>
+        <div className={style['contact-wrapper']} id="contact-form">
             <Container maxWidth="md">
                 <Grid container spacing={3}>
                     <Grid item xs={12} sm={6} sx={{ pr: { md: 8 }, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
