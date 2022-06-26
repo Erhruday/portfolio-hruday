@@ -11,21 +11,25 @@ export default function About() {
                 <Grid container>
                     <Grid item xs={12} md={2} className={style['heading-container']}>
                         <h2 className={`${style['heading']} stand-out`}>
-                            My,My&nbsp;Self&nbsp;&&nbsp;i <span className={style['bar']}>&nbsp;</span>
+                            My&nbsp;Self&nbsp;&&nbsp;i <span className={style['bar']}>&nbsp;</span>
                         </h2>
                     </Grid>
-                    <Grid item xs={12} md={6} className={style['description-container']}>
+                    <Grid item xs={12} md={6} className={style['description-container']} sx={{ mb: { xs: 4, sm: 4, md: 0, lg: 0 } }}>
                         <p className={style['description']}>
-                            Hello! My name is Hruday and I enjoy creating things that live on the internet. My interest in web development started back in 2012
-                            when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML &
-                            CSS!
-                            <br />
-                            <br />I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React.
-                            <br />
-                            <br />
-                            Hello! My name is Hruday and I enjoy creating things that live on the internet. My interest in web development started back in 2012
-                            when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML &
-                            CSS!
+                            Hello! My name is Hruday and I enjoy creating things that live on the internet. My interest in web development started back in 2018
+                            when I decided to learn HTML, CSS and Java Script !
+                        </p>
+                        <p className={style['description']}>
+                            I also recently made a awesome website with Next JS.Interested in the entire frontend spectrum and working on ambitious projects
+                            with positive people.
+                        </p>
+                        <p className={style['description']}>
+                            Engineer by profession. A quick learner in adapting technology with ease having good interpersonal skills, well-organised person.
+                        </p>
+                        <p className={style['description']}>
+                            <a href="#contact-form" style={{ color: '#00ffc2' }}>
+                                Let&apos;s talk more !
+                            </a>
                         </p>
                     </Grid>
                     <Grid item xs={12} md={4} className={style['img-wrapper']}>

@@ -3,14 +3,13 @@
 }
 
 .description {
-    margin-bottom: 40px;
+    margin-bottom: 15px;
     color: #c4cee9;
 }
 .img-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin-top: 50px; */
 }
 .bar {
     position: relative;
@@ -93,7 +92,7 @@
 /* md, medium: 900px */
 @media (min-width: 900px) {
     .about-wrapper {
-        margin-bottom: 250px;
+        margin-bottom: 230px;
     }
     .heading {
         position: relative;
@@ -102,7 +101,7 @@
     }
     .bar::after {
         top: -40px;
-        right: -545px;
+        right: -445px;
     }
     .description {
         padding-left: 30px;
@@ -121,7 +120,7 @@
 
     .bar::after {
         top: -40px;
-        right: -565px;
+        right: -465px;
     }
 }
 

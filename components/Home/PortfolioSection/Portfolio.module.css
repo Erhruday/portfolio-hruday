@@ -8,8 +8,9 @@
     font-weight: bolder;
     font-size: 180px;
     position: absolute;
-    top: -28px;
+    top: 18px;
     right: -150px;
+    font-family: 'Libre Bodoni', serif;
 }
 .portfolio-heading {
     color: #c4cee9;
@@ -65,7 +66,7 @@
     .bg {
         font-size: 200px;
         top: 0;
-        right: -30px;
+        right: 8px;
     }
     .porfolio-btn {
         float: right;
@@ -79,9 +80,9 @@
         right: -135px;
     }
     .bg {
-        font-size: 250px;
-        top: 0;
-        right: -30px;
+        font-size: 220px;
+        top: 25px;
+        right: 8px;
     }
     .portfolio-right-container {
         text-align: right;

@@ -36,11 +36,10 @@ export default function Portfolio() {
                     </Box>
                     <Grid item xs={12} sm={12} md={7} className={style['portfolio-left-container']}>
                         <span className={style['portfolio-feature-project']}>Featured&nbsp;Project</span>
-                        <h4 className={style['portfolio-project-name']}>Halcyon Theme</h4>
+                        <h4 className={style['portfolio-project-name']}>Weather Forecast App</h4>
                         <p>
-                            More than a decade of experience building complex interfaces means that I&apos;m happy to deliver anything from single-page apps to
-                            scaleable design systems. I can help you identify the most appropriate technology for your project and, whilst I love a good
-                            framework, you can be sure that I will never use tech for tech&apos;s sake.
+                            Weather project application is a web based application through which you will able to get all the details related to weather
+                            forecasting of any locations. Details such as temperature, direction of wind, rains, humidity etc.
                         </p>
                     </Grid>
                     <Box sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
@@ -53,13 +52,15 @@ export default function Portfolio() {
                         <img src={`/images/project3.svg`} alt="project3" className={style['project-img']} />
                     </Grid>
                     <Grid item xs={12} sm={12} md={7} className={style['portfolio-right-container']} sx={{ mb: 2 }}>
-                        <span className={style['portfolio-feature-project']}>Featured&nbsp;Project</span>
-                        <h4 className={style['portfolio-project-name']}>Halcyon Theme</h4>
-                        <p>
-                            More than a decade of experience building complex interfaces means that I&apos;m happy to deliver anything from single-page apps to
-                            scaleable design systems. I can help you identify the most appropriate technology for your project and, whilst I love a good
-                            framework, you can be sure that I will never use tech for tech&apos;s sake.
-                        </p>
+                        <a href="https://erhruday.github.io/gym_website" target={'_blank'} rel="noreferrer">
+                            <span className={style['portfolio-feature-project']}>Featured&nbsp;Project</span>
+                            <h4 className={style['portfolio-project-name']}>Gym Website</h4>
+                            <p>
+                                If you’re a gym owner, you need a great website. First and foremost, it helps people to find you. Considering that all your
+                                competitors already have a website, you’re behind the curve if you don’t have one. It’s not enough to just have a website; it
+                                needs to be a great website to establish your business as an authority, help manage your members, and so much more.
+                            </p>
+                        </a>
                     </Grid>
                 </Grid>
                 <a href="#" className={`${style['porfolio-btn']} btn`}>

@@ -7,6 +7,7 @@
     color: #c4cee9;
     margin-right: 25px;
     font-size: 20px;
+    transition-duration: 0.5s;
 }
 .navbar-three-line {
     cursor: pointer;
@@ -21,13 +22,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* text-align: center; */
+    text-align: center;
 }
 .navli-smaller-screen {
-    margin-right: 45px;
+    margin-right: 75px;
     list-style-type: none;
-    padding: 10px;
+    padding: 10px 0;
     color: #c4cee9;
+    transition-duration: 0.5s;
+}
+.nav-li:hover,
+.navli-smaller-screen:hover {
+    color: #ffffff;
 }
 .btn-resume {
     cursor: pointer;
@@ -40,7 +46,7 @@
 }
 .btn-resume:hover {
     color: #ffffff;
-    background: linear-gradient(47deg, rgba(44, 117, 253, 1) 0%, rgba(60, 255, 208, 1) 100%);
+    background: linear-gradient(47deg, rgba(106, 157, 252, 0.431) 0%, rgba(110, 255, 221, 0.526) 100%);
 }
 
 /* New */
@@ -101,7 +107,7 @@
     float: right;
     position: fixed;
     bottom: 26px;
-    right: -13px;
+    right: -15px;
     z-index: 100;
 }
 

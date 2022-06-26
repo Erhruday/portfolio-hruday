@@ -18,7 +18,7 @@ export default function Blog() {
                     <Grid item xs={12} sm={12} md={10}>
                         <Grid container spacing={6}>
                             <Grid item xs={12} sm={12} md={6}>
-                                <Link href="#">
+                                <Link href="/blog">
                                     <a>
                                         <div className={style['container']} style={{ borderTop: '4px solid #efd81d' }}>
                                             <span className={style['topic']}>JAVASCRIPT</span>
@@ -31,7 +31,7 @@ export default function Blog() {
                             </Grid>
 
                             <Grid item xs={12} sm={12} md={6}>
-                                <Link href="#">
+                                <Link href="/blog">
                                     <a>
                                         <div className={style['container']} style={{ borderTop: '4px solid #efd81d' }}>
                                             <span className={style['topic']}>JAVASCRIPT</span>
@@ -43,7 +43,7 @@ export default function Blog() {
                                 </Link>
                             </Grid>
                             <Grid item xs={12} sm={12} md={6}>
-                                <Link href="#">
+                                <Link href="/blog">
                                     <a>
                                         <div className={style['container']} style={{ borderTop: '4px solid rebeccapurple' }}>
                                             <span className={style['topic']}>HTML & CSS</span>
@@ -55,7 +55,7 @@ export default function Blog() {
                                 </Link>
                             </Grid>
                             <Grid item xs={12} sm={12} md={6}>
-                                <Link href="#">
+                                <Link href="/blog">
                                     <a>
                                         <div className={style['container']} style={{ borderTop: '4px solid rebeccapurple' }}>
                                             <span className={style['topic']}>HTML & CSS</span>

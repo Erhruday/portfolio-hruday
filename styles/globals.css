@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+/* only for work font */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@700&display=swap');
 html,
 body {
     padding: 0px;
@@ -16,11 +18,10 @@ a {
 
 * {
     box-sizing: border-box;
-    /* position: relative; */
 }
 .stand-out {
     color: #c4cee9;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 /* ====================== scrollbar design starting from here ===================== */
@@ -35,28 +36,18 @@ a {
 /* ====================== scrollbar design ending ===================== */
 
 /* ====================== Button design Starting ===================== */
-/* .btn {
-    cursor: pointer;
-    font-size: 15px;
-    color: #00ffc2;
-    padding: 7px 10px;
-    border-radius: 5px;
-    border: 2px solid #00ffc2;
-    background-color: transparent;
-} */
 
 .btn {
     position: relative;
     display: inline-block;
-    padding: 12px 20px;
-    /* margin: 40px 0; */
+    padding: 12px 15px;
+    font-size: 15px;
     color: #03e9f4;
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.5s;
     letter-spacing: 4px;
     overflow: hidden;
-    /* margin-right: 50px; */
     background-color: transparent;
     border: none;
 }
