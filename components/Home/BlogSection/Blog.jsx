@@ -70,7 +70,7 @@ export default function Blog() {
                     </Grid>
                 </Grid>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <a href="#" className="btn" style={{ margin: '40px' }}>
+                    <a href="/blog" target={'_blank'} rel="noreferrer" className="btn" style={{ margin: '40px' }}>
                         <span></span>
                         <span></span>
                         <span></span>
