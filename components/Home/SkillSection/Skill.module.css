@@ -31,11 +31,22 @@
     cursor: pointer;
     color: #00ffc2;
 }
+.skill-container {
+    --percentage: none;
+}
+.skill-container:hover {
+    --percentage: block;
+}
 .skills {
     text-transform: capitalize;
-    display: block;
     padding-bottom: 8px;
     color: #c4cee9;
+}
+
+.percentage {
+    color: whitesmoke;
+    float: right;
+    display: var(--percentage);
 }
 
 .container {

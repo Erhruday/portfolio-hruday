@@ -1,6 +1,7 @@
 import style from './Portfolio.module.css';
 import dynamic from 'next/dynamic';
-import { BASE_URL } from '../../../config';
+import Link from 'next/link';
+// import { BASE_URL } from '../../../config';
 const Container = dynamic(() => import('@mui/material/Container/Container'), { ssr: false });
 const Grid = dynamic(() => import('@mui/material/Grid/Grid'), { ssr: false });
 const Box = dynamic(() => import('@mui/material/Box/Box'), { ssr: false });
@@ -63,13 +64,15 @@ export default function Portfolio() {
                         </a>
                     </Grid>
                 </Grid>
-                <a href="#" className={`${style['porfolio-btn']} btn`}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    See&nbsp;More!
-                </a>
+                <Link href={`/work`}>
+                    <a className={`${style['porfolio-btn']} btn`}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        See&nbsp;More!
+                    </a>
+                </Link>
             </Container>
         </div>
     );

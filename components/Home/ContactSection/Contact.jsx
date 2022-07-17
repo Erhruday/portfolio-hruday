@@ -1,9 +1,40 @@
 import style from './Contact.module.css';
 import dynamic from 'next/dynamic';
+import { useRef, useState } from 'react';
+import { BASE_URL } from '../../../config/config';
 const Container = dynamic(() => import('@mui/material/Container/Container'), { ssr: false });
 const Grid = dynamic(() => import('@mui/material/Grid/Grid'), { ssr: false });
 
 export default function Contact() {
+    const formRef = useRef(null);
+
+    const formOnSubmit = (e) => {
+        e.preventDefault();
+        const formData = new FormData(formRef.current);
+        let seralizedFormData = {};
+        formData.forEach((value, key) => {
+            seralizedFormData[key] = value;
+        });
+
+        // console.log(seralizedFormData);
+
+        const requestOptions = {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(seralizedFormData)
+        };
+        fetch(`${BASE_URL}/api/contact`, requestOptions)
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                if (res.status === 200) {
+                    alert('Form Submitted');
+                }
+            });
+    };
     return (
         <div className={style['contact-wrapper']} id="contact-form">
             <Container maxWidth="md">
@@ -16,29 +47,55 @@ export default function Contact() {
                         </p>
                     </Grid>
                     <Grid item xs={12} sm={6} sx={{ mt: { xs: 2 } }}>
-                        <Grid container spacing={3}>
-                            <Grid item xs={6}>
-                                <input type="text" className={style.inputbox} placeholder="Name" />
+                        <form onSubmit={(e) => formOnSubmit(e)} ref={formRef}>
+                            <Grid container spacing={3}>
+                                <Grid item xs={6}>
+                                    <input
+                                        type="text"
+                                        name="userName"
+                                        placeholder="Name"
+                                        required="required"
+                                        // pattern="^\S+$"
+                                        className={style.inputbox}
+                                    />
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <input
+                                        type="text"
+                                        className={style.inputbox}
+                                        placeholder="Email"
+                                        name="userEmail"
+                                        required="required"
+                                        pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                                    />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <input type="text" name="subject" className={style.inputbox} placeholder="Subject" required="required" />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <textarea
+                                        type="text"
+                                        rows="5"
+                                        name="message"
+                                        className={style.inputbox}
+                                        placeholder="Message..."
+                                        required="required"
+                                        pattern="[A-Za-z0-9]{1,20}"
+                                    />
+                                </Grid>
+                                <Grid item xs={12} style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end' }}>
+                                    <button type="submit" className="btn" style={{ float: 'right' }}>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        Send&nbsp;Message!
+                                    </button>
+                                </Grid>
                             </Grid>
-                            <Grid item xs={6}>
-                                <input type="text" className={style.inputbox} placeholder="Email" />
-                            </Grid>
-                            <Grid item xs={12}>
-                                <input type="text" className={style.inputbox} placeholder="Subject" />
-                            </Grid>
-                            <Grid item xs={12}>
-                                <textarea type="text" rows="5" className={style.inputbox} placeholder="Message..." />
-                            </Grid>
-                        </Grid>
+                        </form>
                     </Grid>
                 </Grid>
-                <a href="#" className="btn" style={{ float: 'right', margin: '40px 0px' }}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Send&nbsp;Message!
-                </a>
             </Container>
         </div>
     );

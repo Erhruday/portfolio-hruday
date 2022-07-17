@@ -5,14 +5,6 @@ const Grid = dynamic(() => import('@mui/material/Grid/Grid'), { ssr: false });
 const LinearProgress = dynamic(() => import('@mui/material/LinearProgress/LinearProgress'), { ssr: false });
 
 export default function Skill() {
-    const htmlValue = 95;
-    const cssValue = 90;
-    const jsValue = 75;
-    const reactValue = 70;
-    const nodejslValue = 60;
-    const expressValue = 60;
-    const nextjsValue = 70;
-    const gitsValue = 80;
     return (
         <div className={style['skill-wrapper']}>
             <Container maxWidth="md">
@@ -49,42 +41,16 @@ export default function Skill() {
                     &nbsp;me.
                 </p>
                 <Grid container spacing={3} sx={{ mt: 2 }}>
-                    <Grid item xs={6}>
-                        <div style={{ marginBottom: '18px' }}>
-                            <span className={style.skills}>HTML</span>
-                            <LinearProgress color="secondary" variant="determinate" value={htmlValue} />
-                        </div>
-                        <div style={{ marginBottom: '18px' }}>
-                            <span className={style.skills}>javascript</span>
-                            <LinearProgress color="error" variant="determinate" value={jsValue} />
-                        </div>
-                        <div style={{ marginBottom: '18px' }}>
-                            <span className={style.skills}>node&nbsp;js</span>
-                            <LinearProgress color="success" variant="determinate" value={nodejslValue} />
-                        </div>
-                        <div style={{ marginBottom: '18px' }}>
-                            <span className={style.skills}>Next&nbsp;JS</span>
-                            <LinearProgress color="warning" variant="determinate" value={nextjsValue} />
-                        </div>
-                    </Grid>
-                    <Grid item xs={6}>
-                        <div style={{ marginBottom: '18px' }}>
-                            <span className={style.skills}>CSS</span>
-                            <LinearProgress color="info" variant="determinate" value={cssValue} />
-                        </div>
-                        <div style={{ marginBottom: '18px' }}>
-                            <span className={style.skills}>React&nbsp;JS</span>
-                            <LinearProgress variant="determinate" value={reactValue} />
-                        </div>
-                        <div style={{ marginBottom: '18px' }}>
-                            <span className={style.skills}>Express&nbsp;JS</span>
-                            <LinearProgress color="secondary" variant="determinate" value={expressValue} />
-                        </div>
-                        <div style={{ marginBottom: '18px' }}>
-                            <span className={style.skills}>GIT</span>
-                            <LinearProgress variant="determinate" value={gitsValue} />
-                        </div>
-                    </Grid>
+                    {skills.map((elem, index) => {
+                        return (
+                            <Grid item xs={6} key={index} className={style['skill-container']}>
+                                <div>
+                                    <span className={style.skills}>{elem.skillName}</span> <span className={style['percentage']}>{elem.value}%</span>
+                                    <LinearProgress color={elem.color} variant="determinate" value={elem.value} />
+                                </div>
+                            </Grid>
+                        );
+                    })}
                 </Grid>
 
                 <Grid container spacing={6} sx={{ mt: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -121,3 +87,14 @@ export default function Skill() {
         </div>
     );
 }
+
+const skills = [
+    { skillName: 'HTML', value: 95, color: 'secondary' },
+    { skillName: 'CSS', value: 90, color: 'info' },
+    { skillName: 'JavaScript', value: 75, color: 'error' },
+    { skillName: 'React JS', value: 70, color: 'success' },
+    { skillName: 'Node JS', value: 60, color: 'warning' },
+    { skillName: 'Express JS', value: 60, color: 'info' },
+    { skillName: 'Next JS', value: 70, color: 'secondary' },
+    { skillName: 'GIT', value: 80, color: 'success' }
+];

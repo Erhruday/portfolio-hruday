@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import style from './NavBar.module.css';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import { BASE_URL } from '../../../config';
+import { BASE_URL } from '../../../config/config';
 import Git from '../SVGS/SocialMediaIcons/Git';
 import Instagram from '../SVGS/SocialMediaIcons/Instagram';
 import LinkedIn from '../SVGS/SocialMediaIcons/LinkedIn';

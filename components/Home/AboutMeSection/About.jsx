@@ -1,6 +1,6 @@
 import style from './About.module.css';
 import dynamic from 'next/dynamic';
-import { BASE_URL } from '../../../config';
+import { BASE_URL } from '../../../config/config';
 const Container = dynamic(() => import('@mui/material/Container/Container'), { ssr: false });
 const Grid = dynamic(() => import('@mui/material/Grid/Grid'), { ssr: false });
 

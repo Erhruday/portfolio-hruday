@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 import style from './Footer.module.css';
 import dynamic from 'next/dynamic';
-import { BASE_URL } from '../../../config';
+import { BASE_URL } from '../../../config/config';
 import Codepen from '../SVGS/SocialMediaIcons/Codepen';
 import Twitter from '../SVGS/SocialMediaIcons/Twitter';
 import Instagram from '../SVGS/SocialMediaIcons/Instagram';
 import Git from '../SVGS/SocialMediaIcons/Git';
 import LinkedIn from '../SVGS/SocialMediaIcons/LinkedIn';
 import Logo from '../SVGS/Logo/Logo';
+import UpArrow from '../SVGS/UpArrow';
 const Container = dynamic(() => import('@mui/material/Container/Container'), { ssr: false });
 const Box = dynamic(() => import('@mui/material/Box/Box'), { ssr: false });
 
@@ -59,7 +60,7 @@ export default function Footer() {
 
             {showButton && (
                 <button onClick={scrollToTop} className={style['back-to-top']}>
-                    ˄
+                    <UpArrow />
                 </button>
             )}
         </div>

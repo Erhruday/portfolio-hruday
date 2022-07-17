@@ -70,13 +70,15 @@ export default function Blog() {
                     </Grid>
                 </Grid>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <a href="/blog" target={'_blank'} rel="noreferrer" className="btn" style={{ margin: '40px' }}>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        See&nbsp;More!
-                    </a>
+                    <Link href={`/blog`}>
+                        <a className="btn" style={{ margin: '40px' }}>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            See&nbsp;More!..
+                        </a>
+                    </Link>
                 </div>
             </Container>
         </div>

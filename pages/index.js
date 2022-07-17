@@ -7,10 +7,15 @@ import Hero from '../components/Home/HeroSection/Hero';
 import Portfolio from '../components/Home/PortfolioSection/Portfolio';
 import Skill from '../components/Home/SkillSection/Skill';
 import styles from '../styles/Home.module.css';
+import Head from 'next/head';
 
 export default function Home() {
     return (
         <div>
+            <Head>
+                <title>hruday/home</title>
+                <meta property="og:title" content="My Home Page title" key="title" />
+            </Head>
             <NavBar />
             <Hero />
             <About />

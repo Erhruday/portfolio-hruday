@@ -1,4 +1,5 @@
 import data from '../../data';
+import Head from 'next/head';
 
 export default function Blog() {
     return <h1>Blog Page</h1>;
