@@ -2,6 +2,7 @@ import style from './Hero.module.css';
 import dynamic from 'next/dynamic';
 const Container = dynamic(() => import('@mui/material/Container/Container'), { ssr: false });
 const Grid = dynamic(() => import('@mui/material/Grid/Grid'), { ssr: false });
+import Link from 'next/link';
 
 export default function Hero() {
     return (
@@ -40,7 +41,13 @@ export default function Hero() {
                             <h1 className={`${style['hero-heading']} ${style['heading2']}`}>.</h1>
                         </div>
                         <p className={style['hero-sub-heading']}>FRONTEND ENTHUSIAST</p>
-                        <a href="#contact-form" className="btn">
+                        <a
+                            href="tel:9078796479"
+                            className="btn"
+                            onClick={() => {
+                                navigator.clipboard.writeText('9078796479');
+                            }}
+                        >
                             <span></span>
                             <span></span>
                             <span></span>

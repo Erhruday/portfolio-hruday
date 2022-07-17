@@ -76,7 +76,7 @@ export default function Blog() {
                             <span></span>
                             <span></span>
                             <span></span>
-                            See&nbsp;More!..
+                            See&nbsp;More!
                         </a>
                     </Link>
                 </div>
