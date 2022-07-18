@@ -36,12 +36,14 @@ export default function Portfolio() {
                         </Grid>
                     </Box>
                     <Grid item xs={12} sm={12} md={7} className={style['portfolio-left-container']}>
-                        <span className={style['portfolio-feature-project']}>Featured&nbsp;Project</span>
-                        <h4 className={style['portfolio-project-name']}>Weather Forecast App</h4>
-                        <p>
-                            Weather project application is a web based application through which you will able to get all the details related to weather
-                            forecasting of any locations. Details such as temperature, direction of wind, rains, humidity etc.
-                        </p>
+                        <a href="https://weather-forecast-today-in-your-location.netlify.app/" target={'_blank'} rel="noreferrer">
+                            <span className={style['portfolio-feature-project']}>Featured&nbsp;Project</span>
+                            <h4 className={style['portfolio-project-name']}>Weather Forecast App</h4>
+                            <p>
+                                Weather project application is a web based application through which you will able to get all the details related to weather
+                                forecasting of any locations. Details such as temperature, direction of wind, rains, humidity etc.
+                            </p>
+                        </a>
                     </Grid>
                     <Box sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
                         <Grid item xs={12} sm={12} md={5} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}>
