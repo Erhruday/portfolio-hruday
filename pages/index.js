@@ -8,9 +8,24 @@ import Portfolio from '../components/Home/PortfolioSection/Portfolio';
 import Skill from '../components/Home/SkillSection/Skill';
 // import styles from '../styles/Home.module.css';
 import Head from 'next/head';
+import { useEffect, useState } from 'react';
 
 export default function Home({ data }) {
     //{ data }
+
+    const [blogData, setBlogData] = useState([]);
+    useEffect(() => {
+        async function getData() {
+            const apiUrl = `http://localhost:3000/api/posts`;
+            const response = await fetch(apiUrl);
+            const res = await response.json();
+            console.log(res);
+            setBlogData(res);
+        }
+
+        getData();
+    }, []);
+
     return (
         <div>
             <Head>
@@ -22,7 +37,7 @@ export default function Home({ data }) {
             <About />
             <Portfolio />
             <Skill />
-            <Blog blogData={data?.results} />
+            <Blog blogData={blogData?.results} />
             {/* blogData={data?.results}  */}
             <Contact />
             <Footer />
@@ -30,12 +45,12 @@ export default function Home({ data }) {
     );
 }
 
-export const getStaticProps = async () => {
-    const res = await fetch(`http://localhost:3000/api/posts`);
-    const data = await res.json();
-    return {
-        props: {
-            data
-        }
-    };
-};
+// export const getStaticProps = async () => {
+//     const res = await fetch(`http://localhost:3000/api/posts`);
+//     const data = await res.json();
+//     return {
+//         props: {
+//             data
+//         }
+//     };
+// };
