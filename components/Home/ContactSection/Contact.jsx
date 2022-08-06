@@ -16,8 +16,6 @@ export default function Contact() {
             seralizedFormData[key] = value;
         });
 
-        // console.log(seralizedFormData);
-
         const requestOptions = {
             method: 'POST',
             headers: {
@@ -47,7 +45,12 @@ export default function Contact() {
                         </p>
                     </Grid>
                     <Grid item xs={12} sm={6} sx={{ mt: { xs: 2 } }}>
-                        <form onSubmit={(e) => formOnSubmit(e)} ref={formRef}>
+                        <form
+                            // onSubmit={(e) => formOnSubmit(e)}
+                            ref={formRef}
+                            action="https://formspree.io/f/mrgdzeoe"
+                            method="POST"
+                        >
                             <Grid container spacing={3}>
                                 <Grid item xs={6}>
                                     <input

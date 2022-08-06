@@ -7,7 +7,7 @@ export default function experience() {
     return (
         <div>
             <Head>
-                <title>experience</title>
+                <title>Experience | Hruday</title>
                 <meta property="og:title" content="My experience Page title" key="title" />
             </Head>
             <NavBar />

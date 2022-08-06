@@ -1,10 +1,29 @@
-import db from '../../config/db';
+import Query from '../../config/db';
 
-module.exports = async (req, res) => {
-    db.query(
-        `SELECT *
-    FROM blogs
-    WHERE post_id = ?`[`${req.query.id}`]
-    );
-    res.status(200).json({ profile });
-};
+export default async function handler(req, res) {
+    console.log(req.body.slug, 'REQ');
+    let slug = req.body?.slug;
+    let sqlQuery = 'SELECT * from blogs';
+    if (slug) {
+        sqlQuery += ' where postId = ? ';
+    }
+    let valuesParam;
+    if (slug) {
+        valuesParam = [slug];
+    } else {
+        valuesParam = [];
+    }
+
+    try {
+        console.log(sqlQuery);
+        console.log(valuesParam);
+        const data = await Query({ query: sqlQuery, values: valuesParam });
+        res.status(200).json({ results: data });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+}
+
+// export default function handler(req, res) {
+//     res.status(200).json({ name: 'John Doe' });
+// }

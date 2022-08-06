@@ -7,7 +7,9 @@
     align-items: center;
     justify-content: center;
 }
-
+.name-link:hover {
+    color: #00ffc2;
+}
 .description {
     margin: 0;
     padding: 10px 0;

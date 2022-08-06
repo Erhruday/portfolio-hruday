@@ -23,7 +23,12 @@ a {
     color: #c4cee9;
     font-size: 30px;
 }
-
+.high-light {
+    color: #00ffc2;
+}
+.text-center {
+    text-align: center;
+}
 /* ====================== scrollbar design starting from here ===================== */
 
 ::-webkit-scrollbar {

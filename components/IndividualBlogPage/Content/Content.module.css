@@ -1,0 +1,32 @@
+.content {
+    color: #c4cee9;
+}
+.content h2 {
+    color: rgb(255, 102, 0);
+}
+.content h3 {
+    color: aqua;
+}
+
+.content table {
+    background-color: #aec4ff;
+    color: blueviolet;
+    padding: 10px;
+    border-radius: 2px;
+    border: 2px solid rgb(90, 255, 186);
+}
+.content th {
+    padding: 0 0 10px 0;
+    font-size: 20px;
+}
+.content td {
+    position: relative;
+    padding: 0 0 8px 15px;
+}
+.content pre {
+    padding: 10px 0 10px 10px;
+    background-color: #aec4ff;
+    color: blueviolet;
+    border-radius: 2px;
+    border: 2px solid rgb(90, 255, 186);
+}

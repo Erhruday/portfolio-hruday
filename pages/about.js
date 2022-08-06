@@ -7,7 +7,7 @@ export default function about() {
     return (
         <div>
             <Head>
-                <title>about</title>
+                <title>About | Hruday</title>
                 <meta property="og:title" content="My about Page title" key="title" />
             </Head>
             <NavBar />

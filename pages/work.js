@@ -7,7 +7,7 @@ export default function work() {
     return (
         <div>
             <Head>
-                <title>work</title>
+                <title>Work | Hruday</title>
                 <meta property="og:title" content="My work Page title" key="title" />
             </Head>
             <NavBar />

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import style from './Footer.module.css';
 import dynamic from 'next/dynamic';
-import { BASE_URL } from '../../../config/config';
+
 import Codepen from '../SVGS/SocialMediaIcons/Codepen';
 import Twitter from '../SVGS/SocialMediaIcons/Twitter';
 import Instagram from '../SVGS/SocialMediaIcons/Instagram';
@@ -9,6 +9,7 @@ import Git from '../SVGS/SocialMediaIcons/Git';
 import LinkedIn from '../SVGS/SocialMediaIcons/LinkedIn';
 import Logo from '../SVGS/Logo/Logo';
 import UpArrow from '../SVGS/UpArrow';
+import Link from 'next/link';
 const Container = dynamic(() => import('@mui/material/Container/Container'), { ssr: false });
 const Box = dynamic(() => import('@mui/material/Box/Box'), { ssr: false });
 
@@ -54,8 +55,17 @@ export default function Footer() {
                         </a>
                     </div>
                 </Box>
-                <p className={style.description}>Designed & Built by Hruday Ranjan</p>
-                <Logo dynamicClass={`${style['logo']}`} />
+                <p className={style.description}>
+                    Designed & Built by&nbsp;
+                    <a href="https://www.linkedin.com/in/hrudayranjan" target={'_blank'} rel="noreferrer" className={style['name-link']}>
+                        Hruday Ranjan&nbsp;
+                    </a>
+                </p>
+                <Link href={`/`}>
+                    <a>
+                        <Logo dynamicClass={`${style['logo']}`} />
+                    </a>
+                </Link>
             </Container>
 
             {showButton && (

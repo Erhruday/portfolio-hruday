@@ -6,14 +6,15 @@ import Footer from '../components/Common/Footer/Footer';
 import Hero from '../components/Home/HeroSection/Hero';
 import Portfolio from '../components/Home/PortfolioSection/Portfolio';
 import Skill from '../components/Home/SkillSection/Skill';
-import styles from '../styles/Home.module.css';
+// import styles from '../styles/Home.module.css';
 import Head from 'next/head';
 
-export default function Home() {
+export default function Home({ data }) {
+    //{ data }
     return (
         <div>
             <Head>
-                <title>hruday/home</title>
+                <title>Home | Hruday</title>
                 <meta property="og:title" content="My Home Page title" key="title" />
             </Head>
             <NavBar />
@@ -21,9 +22,20 @@ export default function Home() {
             <About />
             <Portfolio />
             <Skill />
-            <Blog />
+            <Blog blogData={data?.results} />
+            {/* blogData={data?.results}  */}
             <Contact />
             <Footer />
         </div>
     );
 }
+
+export const getStaticProps = async () => {
+    const res = await fetch(`http://localhost:3000/api/posts`);
+    const data = await res.json();
+    return {
+        props: {
+            data
+        }
+    };
+};

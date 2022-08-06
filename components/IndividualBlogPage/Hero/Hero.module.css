@@ -1,0 +1,12 @@
+.wrapper {
+    margin: 100px 0;
+}
+.container {
+    padding: 40px 0;
+}
+
+.meta-description {
+    color: #c4cee9;
+    padding: 0 10px;
+    border-left: 5px solid #00ffc2;
+}

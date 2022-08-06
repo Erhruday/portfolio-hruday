@@ -1,8 +1,19 @@
 .blog-wrapper {
     margin-bottom: 50px;
+    margin-top: 100px;
 }
 .main-container {
     position: relative;
+    min-height: 100vh;
+}
+.bg {
+    color: #ffffff0f;
+    font-weight: bolder;
+    font-size: 180px;
+    position: absolute;
+    top: 15%;
+    right: -30%;
+    font-family: 'Libre Bodoni', serif;
 }
 
 .bar {
@@ -35,6 +46,11 @@
 }
 .description {
     color: #c4cee9;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
 }
 .read-more {
     /* float: right; */
@@ -55,6 +71,11 @@
         top: 45px;
         right: -75px;
     }
+    .bg {
+        font-size: 200px;
+        top: 20%;
+        right: -3%;
+    }
 }
 /* md, medium: 900px */
 @media (min-width: 900px) {
@@ -66,6 +87,11 @@
     .bar::after {
         top: 55px;
         right: -65px;
+    }
+    .bg {
+        font-size: 220px;
+        top: 20%;
+        right: 2%;
     }
 }
 /* lg, large: 1200px */

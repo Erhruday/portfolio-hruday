@@ -15,16 +15,15 @@ export default function Skill() {
                     </h2>
                 </div>
                 <p className={style['description']}>
-                    Since beginning my journey as a freelance developer nearly 10 years ago, I’ve done remote work for agencies, consulted for startups, and
-                    collaborated with talented people to create web products for both business and consumer use.
+                    Since beginning my journey as a developer nearly 1.5 years ago, I’ve done remote work and collaborated with talented people to create web
+                    products for both business and consumer use.
                 </p>
                 <p className={style['description']}>
                     I create successful responsive websites that are fast, easy to use, and built with best practices. The main area of my expertise is
-                    front-end development, HTML, CSS, JS, building small and medium web apps, custom plugins, features, animations, and coding interactive
-                    layouts.
+                    front-end development, HTML, CSS, JS, building small and medium web apps, custom plugins, features, animations.
                 </p>
                 <p className={style['description']}>
-                    Visit my
+                    Visit my&nbsp;
                     <span className={style['highlight-description']}>
                         <a href="https://www.linkedin.com/in/hrudayranjan" target={'_blank'} rel="noreferrer">
                             LinkedIn&nbsp;
