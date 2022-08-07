@@ -1,6 +1,9 @@
 import style from './Portfolio.module.css';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
+import Project2 from '../../Common/SVGS/Projects/Project2';
+import Project1 from '../../Common/SVGS/Projects/Project1';
+import Project3 from '../../Common/SVGS/Projects/Project3';
 // import { BASE_URL } from '../../../config';
 const Container = dynamic(() => import('@mui/material/Container/Container'), { ssr: false });
 const Grid = dynamic(() => import('@mui/material/Grid/Grid'), { ssr: false });
@@ -18,7 +21,7 @@ export default function Portfolio() {
                 </div>
                 <Grid container spacing={3} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Grid item xs={12} sm={12} md={5} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <img src={`/images/project1.svg`} alt="project1" className={style['project-img']} />
+                        <Project1 dynamicClass={style['project-img']} />
                     </Grid>
                     <Grid item xs={12} sm={12} md={7} className={style['portfolio-right-container']}>
                         <span className={style['portfolio-feature-project']}>Featured&nbsp;Project</span>
@@ -32,7 +35,7 @@ export default function Portfolio() {
                     {/* left side content right side image */}
                     <Box sx={{ display: { xs: 'block', sm: 'block', md: 'none' }, mt: 4 }}>
                         <Grid item xs={12} sm={12} md={5} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}>
-                            <img src={`/images/project2.svg`} alt="project2" className={style['project-img']} />
+                            <Project2 dynamicClass={style['project-img']} />
                         </Grid>
                     </Box>
                     <Grid item xs={12} sm={12} md={7} className={style['portfolio-left-container']}>
@@ -45,25 +48,26 @@ export default function Portfolio() {
                             </p>
                         </a>
                     </Grid>
-                    <Box sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
-                        <Grid item xs={12} sm={12} md={5} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}>
-                            <img src={`/images/project2.svg`} alt="project2" className={style['project-img']} />
-                        </Grid>
-                    </Box>
-
-                    <Grid item xs={12} sm={12} md={5} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <img src={`/images/project3.svg`} alt="project3" className={style['project-img']} />
+                    {/* <Box sx={{  }}> */}
+                    <Grid item xs={12} sm={12} md={5} sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
+                        <Project2 dynamicClass={style['project-img']} />
                     </Grid>
-                    <Grid item xs={12} sm={12} md={7} className={style['portfolio-right-container']} sx={{ mb: 2 }}>
-                        <a href="https://erhruday.github.io/gym_website" target={'_blank'} rel="noreferrer">
-                            <span className={style['portfolio-feature-project']}>Featured&nbsp;Project</span>
-                            <h4 className={style['portfolio-project-name']}>Gym Website</h4>
-                            <p>
-                                If you’re a gym owner, you need a great website. First and foremost, it helps people to find you. Considering that all your
-                                competitors already have a website, you’re behind the curve if you don’t have one. It’s not enough to just have a website; it
-                                needs to be a great website to establish your business as an authority, help manage your members, and so much more.
-                            </p>
-                        </a>
+
+                    <Grid container>
+                        <Grid item xs={12} sm={12} md={5} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <Project3 dynamicClass={style['project-img']} />
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={7} className={style['portfolio-right-container']} sx={{ mb: 2 }}>
+                            <a href="https://erhruday.github.io/gym_website" target={'_blank'} rel="noreferrer">
+                                <span className={style['portfolio-feature-project']}>Featured&nbsp;Project</span>
+                                <h4 className={style['portfolio-project-name']}>Gym Website</h4>
+                                <p>
+                                    If you’re a gym owner, you need a great website. First and foremost, it helps people to find you. Considering that all your
+                                    competitors already have a website, you’re behind the curve if you don’t have one. It’s not enough to just have a website;
+                                    it needs to be a great website to establish your business as an authority, help manage your members, and so much more.
+                                </p>
+                            </a>
+                        </Grid>
                     </Grid>
                 </Grid>
                 <Link href={`/work`}>

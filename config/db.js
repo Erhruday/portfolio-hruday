@@ -2,12 +2,12 @@ import mysql from 'mysql2/promise';
 
 export default async function Query({ query, values = [] }) {
     const dbConnection = await mysql.createConnection({
-        host: 'odd37vxevo6h.ap-south-2.psdb.cloud',
-        database: 'portfolio_hruday',
-        user: 'i2m51t2alj99',
-        port: '3306',
-        password: 'pscale_pw_s25UJkdB7B4wYyujIU-QD91DV7eHUC3mcQhVBPon4Mk',
-        ssl: {}
+        host: process.env.MYSQL_HOST,
+        database: process.env.MYSQL_DATABASE,
+        user: process.env.MYSQL_USER,
+        port: process.env.MYSQL_PORT,
+        password: process.env.MYSQL_PASSWORD,
+        ssl: { rejectUnauthorized: true }
 
         // host: 'localhost',
         // database: 'blog_hruday',

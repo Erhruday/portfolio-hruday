@@ -29,6 +29,7 @@
     right: -58px;
 }
 .portfolio-right-container {
+    position: relative;
     padding-left: 35px;
     /* text-align: right; */
     color: #c4cee9;
@@ -50,7 +51,8 @@
     margin: 0;
 }
 .project-img {
-    width: 350px;
+    width: 250px;
+    /* position: relative; */
 }
 
 /* =========================== Media query breakpoints ========================== */
@@ -71,6 +73,10 @@
     .porfolio-btn {
         float: right;
     }
+    .project-img {
+        width: 300px;
+        /* position: relative; */
+    }
 }
 /* md, medium: 900px */
 @media (min-width: 900px) {
@@ -90,6 +96,10 @@
 }
 /* lg, large: 1200px */
 @media (min-width: 1200px) {
+    .project-img {
+        width: 350px;
+        /* position: relative; */
+    }
 }
 
 /* xl, extra-large: 1536px */
