@@ -24,13 +24,14 @@ export default function Portfolio() {
                         <Project1 dynamicClass={style['project-img']} />
                     </Grid>
                     <Grid item xs={12} sm={12} md={7} className={style['portfolio-right-container']}>
-                        <span className={style['portfolio-feature-project']}>Featured&nbsp;Project</span>
-                        <h4 className={style['portfolio-project-name']}>Halcyon Theme</h4>
-                        <p>
-                            More than a decade of experience building complex interfaces means that I&apos;m happy to deliver anything from single-page apps to
-                            scaleable design systems. I can help you identify the most appropriate technology for your project and, whilst I love a good
-                            framework, you can be sure that I will never use tech for tech&apos;s sake.
-                        </p>
+                        <a href="https://streamlab.vercel.app" target={'_blank'} rel="noreferrer">
+                            <span className={style['portfolio-feature-project']}>Featured&nbsp;Project</span>
+                            <h4 className={style['portfolio-project-name']}>Streamlab</h4>
+                            <p>
+                                Streamlab project is a web based application. It offers a library of trendy films and television series from networks. Users can
+                                check the latest TV series,films, web series.
+                            </p>
+                        </a>
                     </Grid>
                     {/* left side content right side image */}
                     <Box sx={{ display: { xs: 'block', sm: 'block', md: 'none' }, mt: 4 }}>
