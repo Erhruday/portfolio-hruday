@@ -52,11 +52,11 @@ export default function NavBar() {
                                 <a>Conatct</a>
                             </Link>
                         </li>
-                        <li className={style['nav-li']}>
+                        {/* <li className={style['nav-li']}>
                             <Link href={`/blog`}>
                                 <a>Blog</a>
                             </Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </Grid>
                 <Grid item xs={1} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

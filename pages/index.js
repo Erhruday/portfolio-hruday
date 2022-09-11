@@ -37,7 +37,7 @@ export default function Home({ data }) {
             <About />
             <Portfolio />
             <Skill />
-            <Blog blogData={blogData?.results} />
+            {/* <Blog blogData={blogData?.results} /> */}
             {/* blogData={data?.results}  */}
             <Contact />
             <Footer />
