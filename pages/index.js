@@ -16,7 +16,7 @@ export default function Home({ data }) {
     const [blogData, setBlogData] = useState([]);
     useEffect(() => {
         async function getData() {
-            const apiUrl = `http://localhost:3000/api/posts`;
+            const apiUrl = `/api/posts`;
             const response = await fetch(apiUrl);
             const res = await response.json();
             console.log(res);
@@ -46,7 +46,7 @@ export default function Home({ data }) {
 }
 
 // export const getStaticProps = async () => {
-//     const res = await fetch(`http://localhost:3000/api/posts`);
+//     const res = await fetch(`/api/posts`);
 //     const data = await res.json();
 //     return {
 //         props: {
