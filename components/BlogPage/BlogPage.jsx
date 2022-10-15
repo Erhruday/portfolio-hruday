@@ -18,7 +18,7 @@ export default function BlogPage({ blogData, showSkeleton }) {
 
                     <Grid item xs={12} sm={12} md={10}>
                         <Grid container spacing={6}>
-                            {false ? (
+                            {showSkeleton ? (
                                 <>
                                     {[1, 2, 3, 4].map((elm, i) => {
                                         return (

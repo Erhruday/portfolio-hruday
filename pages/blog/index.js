@@ -10,12 +10,12 @@ export default function Blog() {
 
     async function getData() {
         const apiUrl = `/api/posts`;
-        // setShowSkeleton(true);
+        setShowSkeleton(true);
         const response = await fetch(apiUrl);
         const res = await response.json();
         // setTimeout(() => {
         setBlogData(res);
-        // setShowSkeleton(false);
+        setShowSkeleton(false);
         // }, 1000);
     }
     useEffect(() => {
