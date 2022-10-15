@@ -10,7 +10,7 @@ export default function Blog() {
     useEffect(() => {
         async function getData() {
             setShowSkeleton(true);
-            const apiUrl = `http://localhost:3000/api/posts`;
+            const apiUrl = `/api/posts`;
             const response = await fetch(apiUrl);
             const res = await response.json();
             console.log(res);
