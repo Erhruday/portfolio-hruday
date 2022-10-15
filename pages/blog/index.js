@@ -6,13 +6,18 @@ import Head from 'next/head';
 
 export default function Blog() {
     const [blogData, setBlogData] = useState([]);
+    const [showSkeleton, setShowSkeleton] = useState(false);
     useEffect(() => {
         async function getData() {
+            setShowSkeleton(true);
             const apiUrl = `http://localhost:3000/api/posts`;
             const response = await fetch(apiUrl);
             const res = await response.json();
             console.log(res);
+            setShowSkeleton(false);
+            // setTimeout(() => {
             setBlogData(res);
+            // }, 1000);
         }
 
         getData();
@@ -25,7 +30,7 @@ export default function Blog() {
                 <meta property="og:title" content="My blog Page title" key="title" />
             </Head>
             <NavBar />
-            <BlogPage blogData={blogData?.results} />
+            <BlogPage blogData={blogData?.results} showSkeleton={showSkeleton} />
             <Footer />
         </div>
     );

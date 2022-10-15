@@ -1,13 +1,12 @@
 import style from './Portfolio.module.css';
-import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Project2 from '../../Common/SVGS/Projects/Project2';
 import Project1 from '../../Common/SVGS/Projects/Project1';
 import Project3 from '../../Common/SVGS/Projects/Project3';
 // import { BASE_URL } from '../../../config';
-const Container = dynamic(() => import('@mui/material/Container/Container'), { ssr: false });
-const Grid = dynamic(() => import('@mui/material/Grid/Grid'), { ssr: false });
-const Box = dynamic(() => import('@mui/material/Box/Box'), { ssr: false });
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 
 export default function Portfolio() {
     return (

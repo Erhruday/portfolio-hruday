@@ -1,8 +1,7 @@
 import style from './Skill.module.css';
-import dynamic from 'next/dynamic';
-const Container = dynamic(() => import('@mui/material/Container/Container'), { ssr: false });
-const Grid = dynamic(() => import('@mui/material/Grid/Grid'), { ssr: false });
-const LinearProgress = dynamic(() => import('@mui/material/LinearProgress/LinearProgress'), { ssr: false });
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import LinearProgress from '@mui/material/LinearProgress';
 import Link from 'next/link';
 
 export default function Skill() {

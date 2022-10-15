@@ -2,8 +2,8 @@ import style from './Contact.module.css';
 import dynamic from 'next/dynamic';
 import { useRef, useState } from 'react';
 import { BASE_URL } from '../../../config/config';
-const Container = dynamic(() => import('@mui/material/Container/Container'), { ssr: false });
-const Grid = dynamic(() => import('@mui/material/Grid/Grid'), { ssr: false });
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
 
 export default function Contact() {
     const formRef = useRef(null);

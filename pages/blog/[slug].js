@@ -15,7 +15,7 @@ export default function Blog() {
 
     useEffect(() => {
         async function getData() {
-            const apiUrl = `http://localhost:3000/api/posts`;
+            const apiUrl = `/api/posts`;
             const postData = {
                 method: 'Post',
                 headers: { 'Content-Type': 'application/json' },

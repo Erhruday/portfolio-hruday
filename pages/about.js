@@ -11,7 +11,10 @@ export default function about() {
                 <meta property="og:title" content="My about Page title" key="title" />
             </Head>
             <NavBar />
-            <About />
+            <div style={{ marginTop: '80px' }}>
+                <About />
+            </div>
+
             <Footer />
         </div>
     );

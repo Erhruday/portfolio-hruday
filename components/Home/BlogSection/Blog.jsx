@@ -1,11 +1,9 @@
 import Link from 'next/link';
 import style from './Blog.module.css';
-import dynamic from 'next/dynamic';
-const Container = dynamic(() => import('@mui/material/Container/Container'), { ssr: false });
-const Grid = dynamic(() => import('@mui/material/Grid/Grid'), { ssr: false });
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
 
 export default function Blog({ blogData }) {
-    console.log(blogData);
     return (
         <div className={style['blog-wrapper']}>
             <Container maxWidth="md" className={style['main-container']}>
@@ -34,31 +32,6 @@ export default function Blog({ blogData }) {
                                     </Grid>
                                 );
                             })}
-
-                            {/* <Grid item xs={12} sm={12} md={6}>
-                                <Link href={`/blog`}>
-                                    <a>
-                                        <div className={style['container']} style={{ borderTop: '4px solid #efd81d' }}>
-                                            <span className={style['topic']}>JAVASCRIPT</span>
-                                            <h3 className={style['sub-heading']}>Javascript Interview Questions & Answers (Part 1)</h3>
-                                            <p className={style['description']}>What is JSX? JSX is a superset of JavaScript that allows...</p>
-                                            <p className={style['read-more']}>Read More</p>
-                                        </div>
-                                    </a>
-                                </Link>
-                            </Grid> */}
-                            {/* <Grid item xs={12} sm={12} md={6}>
-                                <Link href={`/blog`}>
-                                    <a>
-                                        <div className={style['container']} style={{ borderTop: '4px solid rebeccapurple' }}>
-                                            <span className={style['topic']}>HTML & CSS</span>
-                                            <h3 className={style['sub-heading']}>Ultimate Guide to CSS Grid Layout (Part 1)</h3>
-                                            <p className={style['description']}>What is JSX? JSX is a superset of JavaScript that allows...</p>
-                                            <p className={style['read-more']}>Read More</p>
-                                        </div>
-                                    </a>
-                                </Link>
-                            </Grid> */}
                         </Grid>
                     </Grid>
                 </Grid>

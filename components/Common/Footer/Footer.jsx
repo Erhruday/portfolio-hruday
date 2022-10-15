@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 import style from './Footer.module.css';
-import dynamic from 'next/dynamic';
-
 import Codepen from '../SVGS/SocialMediaIcons/Codepen';
 import Twitter from '../SVGS/SocialMediaIcons/Twitter';
 import Instagram from '../SVGS/SocialMediaIcons/Instagram';
@@ -10,8 +8,8 @@ import LinkedIn from '../SVGS/SocialMediaIcons/LinkedIn';
 import Logo from '../SVGS/Logo/Logo';
 import UpArrow from '../SVGS/UpArrow';
 import Link from 'next/link';
-const Container = dynamic(() => import('@mui/material/Container/Container'), { ssr: false });
-const Box = dynamic(() => import('@mui/material/Box/Box'), { ssr: false });
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
 
 export default function Footer() {
     const [showButton, setShowButton] = useState(false);

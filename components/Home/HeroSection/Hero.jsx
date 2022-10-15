@@ -1,8 +1,6 @@
 import style from './Hero.module.css';
-import dynamic from 'next/dynamic';
-const Container = dynamic(() => import('@mui/material/Container/Container'), { ssr: false });
-const Grid = dynamic(() => import('@mui/material/Grid/Grid'), { ssr: false });
-import Link from 'next/link';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
 
 export default function Hero() {
     return (

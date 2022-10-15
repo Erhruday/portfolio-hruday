@@ -132,7 +132,7 @@
 /* md, medium: 900px */
 @media (min-width: 900px) {
     .skill-wrapper {
-        margin-bottom: 100px;
+        margin-bottom: 150px;
     }
     .bar::after {
         width: 100px;

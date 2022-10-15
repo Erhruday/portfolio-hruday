@@ -1,15 +1,14 @@
 import { useState } from 'react';
 import style from './NavBar.module.css';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
 import Git from '../SVGS/SocialMediaIcons/Git';
 import Instagram from '../SVGS/SocialMediaIcons/Instagram';
 import LinkedIn from '../SVGS/SocialMediaIcons/LinkedIn';
 import Twitter from '../SVGS/SocialMediaIcons/Twitter';
 import Codepen from '../SVGS/SocialMediaIcons/Codepen';
 import LargeLogo from '../SVGS/Logo/LargeLogo';
-const Box = dynamic(() => import('@mui/material/Box/Box'), { ssr: false });
-const Grid = dynamic(() => import('@mui/material/Grid/Grid'), { ssr: false });
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 
 export default function NavBar() {
     const [navbarExpandIsToggle, setNavbarExpandIsToggle] = useState(false);
@@ -49,14 +48,14 @@ export default function NavBar() {
                         </li>
                         <li className={style['nav-li']}>
                             <Link href={`/contact`}>
-                                <a>Conatct</a>
+                                <a>Contact</a>
                             </Link>
                         </li>
-                        {/* <li className={style['nav-li']}>
+                        <li className={style['nav-li']}>
                             <Link href={`/blog`}>
                                 <a>Blog</a>
                             </Link>
-                        </li> */}
+                        </li>
                     </ul>
                 </Grid>
                 <Grid item xs={1} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -86,7 +85,7 @@ export default function NavBar() {
                             </li>
                             <li className={style['navli-smaller-screen']}>
                                 <Link href={`/contact`}>
-                                    <a>Conatct</a>
+                                    <a>Contact</a>
                                 </Link>
                             </li>
                             <li className={style['navli-smaller-screen']}>

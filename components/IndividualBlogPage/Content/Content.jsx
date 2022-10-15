@@ -1,10 +1,5 @@
 import style from './Content.module.css';
-import dynamic from 'next/dynamic';
-const Container = dynamic(() => import('@mui/material/Container/Container'), { ssr: false });
-const Grid = dynamic(() => import('@mui/material/Grid/Grid'), { ssr: false });
-import Link from 'next/link';
-
-import React from 'react';
+import Container from '@mui/material/Container';
 
 function Content({ data }) {
     return (

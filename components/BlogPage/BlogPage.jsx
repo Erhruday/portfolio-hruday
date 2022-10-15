@@ -1,10 +1,10 @@
 import style from './BlogPage.module.css';
-import dynamic from 'next/dynamic';
-const Container = dynamic(() => import('@mui/material/Container/Container'), { ssr: false });
-const Grid = dynamic(() => import('@mui/material/Grid/Grid'), { ssr: false });
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
 import Link from 'next/link';
+import Skeleton from '@mui/material/Skeleton';
 
-export default function BlogPage({ blogData }) {
+export default function BlogPage({ blogData, showSkeleton }) {
     return (
         <div className={style['blog-wrapper']}>
             <span className={style.bg}>Blog</span>
@@ -21,16 +21,20 @@ export default function BlogPage({ blogData }) {
                             {blogData?.map((elem, index) => {
                                 return (
                                     <Grid item xs={12} sm={12} md={6} key={index}>
-                                        <Link href={`/blog/${elem.postId}`}>
-                                            <a>
-                                                <div className={style['container']} style={{ borderTop: '4px solid #efd81d' }}>
-                                                    <span className={style['topic']}>{elem.questionType}</span>
-                                                    <h3 className={style['sub-heading']}>{elem.tittle}</h3>
-                                                    <p className={style['description']}>{elem.metaDescription}</p>
-                                                    <p className={style['read-more']}>Read More</p>
-                                                </div>
-                                            </a>
-                                        </Link>
+                                        {showSkeleton ? (
+                                            <Skeleton variant="rounded" width={330} height={200} />
+                                        ) : (
+                                            <Link href={`/blog/${elem.postId}`}>
+                                                <a>
+                                                    <div className={style['container']} style={{ borderTop: '4px solid #efd81d' }}>
+                                                        <span className={style['topic']}>{elem.questionType}</span>
+                                                        <h3 className={style['sub-heading']}>{elem.tittle}</h3>
+                                                        <p className={style['description']}>{elem.metaDescription}</p>
+                                                        <p className={style['read-more']}>Read More</p>
+                                                    </div>
+                                                </a>
+                                            </Link>
+                                        )}
                                     </Grid>
                                 );
                             })}
