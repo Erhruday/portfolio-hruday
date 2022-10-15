@@ -7,19 +7,18 @@ import Head from 'next/head';
 export default function Blog() {
     const [blogData, setBlogData] = useState([]);
     const [showSkeleton, setShowSkeleton] = useState(false);
-    useEffect(() => {
-        async function getData() {
-            setShowSkeleton(true);
-            const apiUrl = `/api/posts`;
-            const response = await fetch(apiUrl);
-            const res = await response.json();
-            console.log(res);
-            setShowSkeleton(false);
-            // setTimeout(() => {
-            setBlogData(res);
-            // }, 1000);
-        }
 
+    async function getData() {
+        const apiUrl = `/api/posts`;
+        setShowSkeleton(true);
+        const response = await fetch(apiUrl);
+        const res = await response.json();
+        // setTimeout(() => {
+        setBlogData(res);
+        setShowSkeleton(false);
+        // }, 1000);
+    }
+    useEffect(() => {
         getData();
     }, []);
 

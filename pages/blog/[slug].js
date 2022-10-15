@@ -9,25 +9,28 @@ import Content from '../../components/IndividualBlogPage/Content/Content';
 
 export default function Blog() {
     const [blogData, setBlogData] = useState([]);
+    const [showSkeletonForIndividualBlog, setShowSkeletonForIndividualBlog] = useState(false);
 
     const router = useRouter();
     const slug = router.query.slug;
 
-    useEffect(() => {
-        async function getData() {
-            const apiUrl = `/api/posts`;
-            const postData = {
-                method: 'Post',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    slug: slug
-                })
-            };
-            const response = await fetch(apiUrl, postData);
-            const res = await response.json();
-            setBlogData(res);
-        }
+    async function getData() {
+        const apiUrl = `/api/posts`;
+        setShowSkeletonForIndividualBlog(true);
+        const postData = {
+            method: 'Post',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                slug: slug
+            })
+        };
+        const response = await fetch(apiUrl, postData);
+        const res = await response.json();
+        setBlogData(res);
+        setShowSkeletonForIndividualBlog(false);
+    }
 
+    useEffect(() => {
         getData();
     }, [router.query.slug, router.isReady]);
 
@@ -38,8 +41,8 @@ export default function Blog() {
                 <meta property="og:title" content="My blog Page title" key="title" />
             </Head>
             <NavBar />
-            <Hero data={blogData?.results} />
-            <Content data={blogData?.results} />
+            <Hero data={blogData?.results} showSkeletonForIndividualBlog={showSkeletonForIndividualBlog} />
+            <Content data={blogData?.results} showSkeletonForIndividualBlog={showSkeletonForIndividualBlog} />
 
             <Footer />
         </>

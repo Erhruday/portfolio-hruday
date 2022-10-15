@@ -18,12 +18,20 @@ export default function BlogPage({ blogData, showSkeleton }) {
 
                     <Grid item xs={12} sm={12} md={10}>
                         <Grid container spacing={6}>
-                            {blogData?.map((elem, index) => {
-                                return (
-                                    <Grid item xs={12} sm={12} md={6} key={index}>
-                                        {showSkeleton ? (
-                                            <Skeleton variant="rounded" width={330} height={200} />
-                                        ) : (
+                            {showSkeleton ? (
+                                <>
+                                    {[1, 2, 3, 4].map((elm, i) => {
+                                        return (
+                                            <Grid item xs={12} sm={12} md={6} key={i}>
+                                                <Skeleton variant="rounded" height={250} sx={{ bgcolor: 'grey.400' }} />
+                                            </Grid>
+                                        );
+                                    })}
+                                </>
+                            ) : (
+                                blogData?.map((elem, index) => {
+                                    return (
+                                        <Grid item xs={12} sm={12} md={6} key={index} sx={{ zIndex: '100' }}>
                                             <Link href={`/blog/${elem.postId}`}>
                                                 <a>
                                                     <div className={style['container']} style={{ borderTop: '4px solid #efd81d' }}>
@@ -34,10 +42,10 @@ export default function BlogPage({ blogData, showSkeleton }) {
                                                     </div>
                                                 </a>
                                             </Link>
-                                        )}
-                                    </Grid>
-                                );
-                            })}
+                                        </Grid>
+                                    );
+                                })
+                            )}
                         </Grid>
                     </Grid>
                 </Grid>
@@ -45,3 +53,5 @@ export default function BlogPage({ blogData, showSkeleton }) {
         </div>
     );
 }
+
+//// style={{ borderTop: `${`4px solid ${(index + 2) % 2 === 0 ? '#00ffc2' : '#efd81d'}`}` }}

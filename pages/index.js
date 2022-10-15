@@ -14,15 +14,19 @@ export default function Home({ data }) {
     //{ data }
 
     const [blogData, setBlogData] = useState([]);
-    useEffect(() => {
-        async function getData() {
-            const apiUrl = `/api/posts`;
-            const response = await fetch(apiUrl);
-            const res = await response.json();
-            console.log(res);
-            setBlogData(res);
-        }
+    const [showSkeletonForBlogSection, setShowSkeletonForBlogSection] = useState(false);
 
+    async function getData() {
+        const apiUrl = `/api/posts`;
+        setShowSkeletonForBlogSection(true);
+        const response = await fetch(apiUrl);
+        const res = await response.json();
+        console.log(res);
+        setBlogData(res);
+        setShowSkeletonForBlogSection(false);
+    }
+
+    useEffect(() => {
         getData();
     }, []);
 
@@ -37,7 +41,7 @@ export default function Home({ data }) {
             <About />
             <Portfolio />
             <Skill />
-            <Blog blogData={blogData?.results} />
+            <Blog blogData={blogData?.results} showSkeletonForBlogSection={showSkeletonForBlogSection} />
             {/* blogData={data?.results}  */}
             <Contact />
             <Footer />
