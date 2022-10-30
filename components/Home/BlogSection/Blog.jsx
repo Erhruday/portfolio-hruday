@@ -29,7 +29,7 @@ export default function Blog({ blogData, showSkeletonForBlogSection }) {
                                 </>
                             ) : (
                                 <>
-                                    {blogData?.map((elem, index) => {
+                                    {blogData?.slice(0, 4).map((elem, index) => {
                                         return (
                                             <Grid item xs={12} sm={12} md={6} key={index}>
                                                 <Link href={`/blog/${elem.postId}`}>

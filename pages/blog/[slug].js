@@ -37,7 +37,7 @@ export default function Blog() {
     return (
         <>
             <Head>
-                <title>tittle | Hruday</title>
+                <title>{blogData?.results?.map((elm) => elm.tittle)} | Hruday</title>
                 <meta property="og:title" content="My blog Page title" key="title" />
             </Head>
             <NavBar />
