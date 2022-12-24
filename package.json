@@ -15,7 +15,8 @@
     "dotenv": "^16.0.1",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
-    "next": "12.1.6",
+    "next": "^12.3.4",
+    "next-swc-win32-x64-msvc": "^0.0.1-security",
     "nodemailer": "^6.7.5",
     "react": "18.1.0",
     "react-dom": "18.1.0",
@@ -24,5 +25,9 @@
   "devDependencies": {
     "eslint": "8.16.0",
     "eslint-config-next": "12.1.6"
+  },
+  "optionalDependencies": {
+    "@next/swc-win32-x64-gnu": "*",
+    "@next/swc-win32-x64-msvc": "13.0.7"
   }
 }
