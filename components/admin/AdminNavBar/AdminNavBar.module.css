@@ -1,0 +1,24 @@
+.nav-wrapper {
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+.admin-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 500;
+}
+.logout-btn {
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.admin-icon {
+  width: 50px;
+}

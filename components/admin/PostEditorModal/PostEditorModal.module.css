@@ -1,0 +1,15 @@
+.text-field-container {
+  display: flex;
+  flex-direction: column;
+}
+.text-field-container label {
+  margin: 10px 0;
+  font-size: 22px;
+}
+.text-field-container input,
+.text-field-container textarea {
+  border: 2px solid rgb(190, 190, 190);
+  border-radius: 5px;
+  padding: 8px 10px;
+  font-size: 22px;
+}
