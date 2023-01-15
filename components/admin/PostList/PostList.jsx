@@ -6,9 +6,9 @@ import PostEditorModal from "../PostEditorModal/PostEditorModal";
 
 export default function PostList({ postData }) {
   const [openModal, setOpenModal] = useState(false);
-  console.log(postData, "POSTS");
+  // console.log(postData, "POSTS");
   const editOnClick = (id) => {
-    console.log(id, "POST ID");
+    // console.log(id, "POST ID");
     setOpenModal(true);
   };
   return (

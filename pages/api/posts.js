@@ -1,7 +1,6 @@
 import Query from "../../config/db";
 
 export default async function handler(req, res) {
-  // console.log(req.body.slug, 'REQ');
   let slug = req.body?.slug;
   let sqlQuery = "SELECT * from blogs_hruday.blogs";
   if (slug) {
@@ -16,8 +15,6 @@ export default async function handler(req, res) {
   }
 
   try {
-    // console.log(sqlQuery);
-    // console.log(valuesParam);
     const data = await Query({ query: sqlQuery, values: valuesParam });
     res.status(200).json({ results: data });
   } catch (error) {

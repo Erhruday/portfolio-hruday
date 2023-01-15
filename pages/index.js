@@ -22,7 +22,6 @@ export default function Home({ data }) {
     setShowSkeletonForBlogSection(true);
     const response = await fetch(apiUrl);
     const res = await response.json();
-    // console.log(res, "DATA");
     setBlogData(res);
     setShowSkeletonForBlogSection(false);
   }

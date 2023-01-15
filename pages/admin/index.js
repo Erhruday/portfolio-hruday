@@ -8,7 +8,6 @@ export default function Index() {
     const apiUrl = `/api/posts`;
     const response = await fetch(apiUrl);
     const res = await response.json();
-    // console.log(res.results, "DATA");
     setPostData(res.results);
   }
 

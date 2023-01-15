@@ -13,7 +13,7 @@ export default async function Query({ query, values = [] }) {
   try {
     const [results] = await dbConnection.execute(query, values);
     dbConnection.end();
-    console.log("Database Connected Succesfully");
+    // console.log("Database Connected Succesfully");
     return results;
   } catch (error) {
     throw Error(error.message);
