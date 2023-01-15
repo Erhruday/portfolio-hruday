@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import AdminNavBar from "../../components/admin/AdminNavBar/AdminNavBar";
 import PostList from "../../components/admin/PostList/PostList";
 
-export default function index() {
+export default function Index() {
   const [postData, setPostData] = useState([]);
   async function getData() {
     const apiUrl = `/api/posts`;

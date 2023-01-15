@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
@@ -11,7 +12,12 @@ function MyApp({ Component, pageProps }) {
   //   }
   // }, [router.pathname]);
 
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Component {...pageProps} />
+      <Analytics />
+    </>
+  );
 }
 
 export default MyApp;
