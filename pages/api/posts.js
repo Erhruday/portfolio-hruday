@@ -18,7 +18,7 @@ export default async function handler(req, res) {
     const data = await Query({ query: sqlQuery, values: valuesParam });
     res.status(200).json({ results: data });
   } catch (error) {
-    console.log(error);
+    console.error(error);
     res.status(500).json({ error: error.message });
   }
 }

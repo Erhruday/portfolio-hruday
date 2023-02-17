@@ -20,6 +20,9 @@ a {
 * {
   box-sizing: border-box;
 }
+.text-white {
+  color: #c4cee9 !important;
+}
 .stand-out {
   color: #c4cee9;
   font-size: 30px;

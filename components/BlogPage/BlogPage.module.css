@@ -1,99 +1,101 @@
 .blog-wrapper {
-    margin-bottom: 50px;
-    margin-top: 100px;
-    position: relative;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  padding-top: 100px;
+  position: relative;
+  overflow: hidden;
 }
 .main-container {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 .bg {
-    color: #ffffff0f;
-    font-weight: bolder;
-    font-size: 180px;
-    position: absolute;
-    top: -3%;
-    right: -30%;
-    font-family: 'Libre Bodoni', serif;
+  color: #ffffff0f;
+  font-weight: bolder;
+  font-size: 180px;
+  position: absolute;
+  top: 3%;
+  right: -30%;
+  font-family: "Libre Bodoni", serif;
 }
 
 .bar {
-    position: relative;
+  position: relative;
 }
 .bar::after {
-    content: ' ';
-    width: 50px;
-    height: 3px;
-    background-color: #c4cee9;
-    position: absolute;
-    top: 35px;
-    right: -45px;
+  content: " ";
+  width: 50px;
+  height: 3px;
+  background-color: #c4cee9;
+  position: absolute;
+  top: 35px;
+  right: -45px;
 }
 .container {
-    padding: 15px;
-    /* border-top: 4px solid rebeccapurple; */
-    border-radius: 5px;
-    box-shadow: -1px 3px 14px 0px rgba(0, 0, 0, 0.75);
-    z-index: 100;
+  padding: 15px;
+  /* border-top: 4px solid rebeccapurple; */
+  border-radius: 5px;
+  box-shadow: -1px 3px 14px 0px rgba(0, 0, 0, 0.75);
+  z-index: 100;
 }
 .topic {
-    display: inline-block;
-    color: orangered;
-    font-size: 20px;
-    padding-bottom: 5px;
+  display: inline-block;
+  color: orangered;
+  font-size: 20px;
+  padding-bottom: 5px;
 }
 .sub-heading {
-    margin: 0;
-    color: whitesmoke;
+  margin: 0;
+  color: whitesmoke;
 }
 .description {
-    color: #c4cee9;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* number of lines to show */
-    -webkit-box-orient: vertical;
+  color: #c4cee9;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
 }
 .read-more {
-    /* float: right; */
-    /* display: inline-block; */
-    cursor: pointer;
-    margin: 0;
-    color: #00ffc2;
-    text-decoration: underline;
-    text-align: right;
+  /* float: right; */
+  /* display: inline-block; */
+  cursor: pointer;
+  margin: 0;
+  color: #00ffc2;
+  text-decoration: underline;
+  text-align: right;
 }
 
 /* =========================== Media query breakpoints ========================== */
 
 /* sm, small: 600px */
 @media (min-width: 600px) {
-    .bar::after {
-        width: 80px;
-        top: 45px;
-        right: -75px;
-    }
-    .bg {
-        font-size: 200px;
-        top: 2%;
-        right: -20%;
-    }
+  .bar::after {
+    width: 80px;
+    top: 45px;
+    right: -75px;
+  }
+  .bg {
+    font-size: 200px;
+    top: 3%;
+    right: -20%;
+  }
 }
 /* md, medium: 900px */
 @media (min-width: 900px) {
-    .heading {
-        position: absolute;
-        top: -12px;
-        transform: rotate(90deg);
-    }
-    .bar::after {
-        top: 55px;
-        right: -65px;
-    }
-    .bg {
-        font-size: 220px;
-        top: -5%;
-        right: -5%;
-    }
+  .heading {
+    position: absolute;
+    top: 90px;
+    transform: rotate(90deg);
+  }
+  .bar::after {
+    top: 55px;
+    right: -65px;
+  }
+  .bg {
+    font-size: 220px;
+    top: -2%;
+    right: -5%;
+  }
 }
 /* lg, large: 1200px */
 @media (min-width: 1200px) {
