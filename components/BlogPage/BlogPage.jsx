@@ -44,7 +44,7 @@ export default function BlogPage({ blogData, showSkeleton }) {
                       sx={{ zIndex: "100" }}
                     >
                       <Link href={`/blog/${elem.postId}`}>
-                        <a>
+                        {/* <a> */}
                           <div
                             className={style["container"]}
                             style={{ borderTop: "4px solid #efd81d" }}
@@ -60,7 +60,7 @@ export default function BlogPage({ blogData, showSkeleton }) {
                             </p>
                             <p className={style["read-more"]}>Read More</p>
                           </div>
-                        </a>
+                        {/* </a> */}
                       </Link>
                     </Grid>
                   );

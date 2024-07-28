@@ -33,14 +33,14 @@ export default function Blog({ blogData, showSkeletonForBlogSection }) {
                                         return (
                                             <Grid item xs={12} sm={12} md={6} key={index}>
                                                 <Link href={`/blog/${elem.postId}`}>
-                                                    <a>
+                                                   
                                                         <div className={style['container']} style={{ borderTop: '4px solid #efd81d' }}>
                                                             <span className={style['topic']}>{elem.questionType}</span>
                                                             <h3 className={style['sub-heading']}>{elem.tittle}</h3>
                                                             <p className={style['description']}>{elem.metaDescription}</p>
                                                             <p className={style['read-more']}>Read More</p>
                                                         </div>
-                                                    </a>
+                                                   
                                                 </Link>
                                             </Grid>
                                         );
@@ -52,13 +52,13 @@ export default function Blog({ blogData, showSkeletonForBlogSection }) {
                 </Grid>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Link href={`/blog`}>
-                        <a className="btn" style={{ margin: '40px' }}>
+                        <span className="btn" style={{ margin: '40px' }}>
                             <span></span>
                             <span></span>
                             <span></span>
                             <span></span>
                             See&nbsp;More!
-                        </a>
+                        </span>
                     </Link>
                 </div>
             </Container>

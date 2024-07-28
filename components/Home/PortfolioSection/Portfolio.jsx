@@ -209,13 +209,13 @@ export default function Portfolio() {
           </Grid>
         </Grid>
         <Link href={`/work`}>
-          <a className={`${style["porfolio-btn"]} btn`}>
+          <span className={`${style["porfolio-btn"]} btn`}>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             See&nbsp;More!
-          </a>
+          </span>
         </Link>
       </Container>
     </div>

@@ -98,9 +98,9 @@ export default function Footer() {
           </a>
         </p>
         <Link href={`/`}>
-          <a>
+          {/* <a> */}
             <Logo dynamicClass={`${style["logo"]}`} />
-          </a>
+          {/* </a> */}
         </Link>
       </Container>
 

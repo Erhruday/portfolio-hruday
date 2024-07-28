@@ -54,8 +54,8 @@ export default function Skill() {
 
                 <Grid container spacing={6} sx={{ mt: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Grid item xs={12} sm={12} md={6} sx={{ p: { xs: 5, sm: 5, md: 0 } }}>
-                        <Link href="https://www.synergiesoftware.com/" passHref>
-                            <a target="_blank" rel="noopener noreferrer">
+                        <Link href="https://www.synergiesoftware.com/" passHref target="_blank" rel="noopener noreferrer">
+                            {/* <a > */}
                                 <div className={style.container}>
                                     <div className={`${style.box1} ${style['stack-top']}`}></div>
                                     <div className={`${style.box2}`}>
@@ -66,12 +66,12 @@ export default function Skill() {
                                         <p className={style['description']}>The main area of my expertise is front-end development.</p>
                                     </div>
                                 </div>
-                            </a>
+                            {/* </a> */}
                         </Link>
                     </Grid>
                     <Grid item xs={12} sm={12} md={6} sx={{ p: { xs: 5, sm: 5, md: 0 } }}>
-                        <Link href="https://tabgraf.com/" passHref>
-                            <a target="_blank" rel="noopener noreferrer">
+                        <Link href="https://tabgraf.com/" passHref target="_blank" rel="noopener noreferrer">
+                            {/* <a target="_blank" rel="noopener noreferrer"> */}
                                 <div className={style.container}>
                                     <div className={`${style.box1} ${style['stack-top']}`}></div>
                                     <div className={`${style.box2}`}>
@@ -82,7 +82,7 @@ export default function Skill() {
                                         <p className={style['description']}>The main area of my expertise is front-end back-end development.</p>
                                     </div>
                                 </div>
-                            </a>
+                            {/* </a> */}
                         </Link>
                     </Grid>
                 </Grid>

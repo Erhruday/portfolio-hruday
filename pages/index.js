@@ -41,10 +41,13 @@ export default function Home({ data }) {
       <About />
       <Portfolio />
       <Skill />
+      {
+        blogData.length > 0 && 
       <Blog
         blogData={blogData?.results}
         showSkeletonForBlogSection={showSkeletonForBlogSection}
       />
+      }
       {/* blogData={data?.results}  */}
       <Contact />
       <Footer />

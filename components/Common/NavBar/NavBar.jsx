@@ -47,9 +47,9 @@ export default function NavBar() {
           }}
         >
           <Link href={`/`}>
-            <a>
+            {/* <a> */}
               <LargeLogo />
-            </a>
+            {/* </a> */}
           </Link>
         </Grid>
         <Grid
@@ -66,29 +66,29 @@ export default function NavBar() {
           >
             <li className={style["nav-li"]}>
               <Link href={`/about`}>
-                <a>About</a>
+                About
               </Link>
             </li>
             <li className={style["nav-li"]}>
               <Link href={`/experience`}>
-                <a>Experience</a>
+                Experience
               </Link>
             </li>
             <li className={style["nav-li"]}>
               <Link href={`/work`}>
-                <a>Work</a>
+                Work
               </Link>
             </li>
             <li className={style["nav-li"]}>
               <Link href={`/contact`}>
-                <a>Contact</a>
+                Contact
               </Link>
             </li>
-            <li className={style["nav-li"]}>
+            {/* <li className={style["nav-li"]}>
               <Link href={`/blog`}>
-                <a>Blog</a>
+                Blog
               </Link>
-            </li>
+            </li> */}
           </ul>
         </Grid>
         <Grid
@@ -111,29 +111,29 @@ export default function NavBar() {
             <ul>
               <li className={style["navli-smaller-screen"]}>
                 <Link href={`/about`}>
-                  <a>About</a>
+                  About
                 </Link>
               </li>
               <li className={style["navli-smaller-screen"]}>
                 <Link href={`/experience`}>
-                  <a>Experience</a>
+                  Experience
                 </Link>
               </li>
               <li className={style["navli-smaller-screen"]}>
                 <Link href={`/work`}>
-                  <a>Work</a>
+                  Work
                 </Link>
               </li>
               <li className={style["navli-smaller-screen"]}>
                 <Link href={`/contact`}>
-                  <a>Contact</a>
+                  Contact
                 </Link>
               </li>
-              <li className={style["navli-smaller-screen"]}>
+              {/* <li className={style["navli-smaller-screen"]}>
                 <Link href={`/blog`}>
-                  <a>Blog</a>
+                  Blog
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         )}
@@ -141,7 +141,7 @@ export default function NavBar() {
 
       <Box sx={{ display: { xs: "none", sm: "none", md: "block" } }}>
         <div className={style["socialmeadia-icons-container"]}>
-          <a
+          <Link
             href="https://github.com/Erhruday/Hello-World"
             target={"_blank"}
             rel="noreferrer"
@@ -149,49 +149,49 @@ export default function NavBar() {
           >
             {/* <img src={`${BASE_URL}/images/github.svg`} alt="git-logo" className={style['logo']} /> */}
             <Git dynamicClass={`${style["logo"]}`} />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://www.instagram.com/h_r_u_d_a_y_.r_a_n_j_a_n/"
             target={"_blank"}
             rel="noreferrer"
             className={style.a}
           >
             <Instagram dynamicClass={`${style["logo"]}`} />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://www.linkedin.com/in/hrudayranjan"
             target={"_blank"}
             rel="noreferrer"
             className={style.a}
           >
             <LinkedIn dynamicClass={`${style["logo"]}`} />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://twitter.com/Er_hruday"
             target={"_blank"}
             rel="noreferrer"
             className={style.a}
           >
             <Twitter dynamicClass={`${style["logo"]}`} />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://codepen.io/Erhruday/pens/showcase"
             target={"_blank"}
             rel="noreferrer"
             className={style.a}
           >
             <Codepen dynamicClass={`${style["logo"]}`} />
-          </a>
+          </Link>
         </div>
         <div className={style["left-bar"]}></div>
         <p className={style.email}>
-          <Link
+          <a
             href="mailto: hrudayranjan8@gmail.com"
             target={"_blank"}
             rel="noreferrer"
           >
-            <a>hrudayranajan8@gmail.com</a>
-          </Link>
+            hrudayranajan8@gmail.com
+          </a>
         </p>
         <div className={style["right-bar"]}></div>
       </Box>
