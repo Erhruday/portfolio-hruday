@@ -1,4 +1,3 @@
-// import data from '../../data';
 import Head from "next/head";
 import { useRouter } from "next/router";
 import NavBar from "../../components/Common/NavBar/NavBar";
@@ -35,7 +34,7 @@ export default function Blog() {
     if (router.isReady) {
       getData();
     }
-  }, [router.isReady]);
+  });
 
   return (
     <>

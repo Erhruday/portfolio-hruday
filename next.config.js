@@ -21,9 +21,9 @@
 
 module.exports = {
   compiler: {
-    removeConsole: {
-      exclude: ["log"],
-    },
+    // removeConsole: {
+    //   exclude: ["log"],
+    // },
   },
   env: {
     BASE_URL: process.env.BASE_URL,

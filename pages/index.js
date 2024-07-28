@@ -27,7 +27,7 @@ export default function Home({ data }) {
   }
 
   useEffect(() => {
-    getData();
+    // getData();
   }, []);
 
   return (
