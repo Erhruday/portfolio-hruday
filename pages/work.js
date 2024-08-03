@@ -2,8 +2,11 @@ import Footer from '../components/Common/Footer/Footer';
 import NavBar from '../components/Common/NavBar/NavBar';
 import Portfolio from '../components/Home/PortfolioSection/Portfolio';
 import Head from 'next/head';
+import  { workLists } from "../data"
+
 
 export default function work() {
+    
     return (
         <div>
             <Head>
@@ -11,8 +14,10 @@ export default function work() {
                 <meta property="og:title" content="My work Page title" key="title" />
             </Head>
             <NavBar />
-            <Portfolio />
+            <Portfolio workLists={workLists}/>
             <Footer />
         </div>
     );
 }
+
+

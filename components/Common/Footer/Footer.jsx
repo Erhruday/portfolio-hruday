@@ -45,7 +45,7 @@ export default function Footer() {
         <Box sx={{ display: { xs: "block", sm: "block", md: "none" } }}>
           <div className={style["socialmeadia-icons-container"]}>
             <a
-              href="https://github.com/Erhruday/Hello-World"
+              href="https://github.com/Erhruday"
               target={"_blank"}
               rel="noreferrer"
               className={style.a}

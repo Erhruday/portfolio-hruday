@@ -51,9 +51,7 @@ export default function Contact() {
               Get In Touch
             </h2>
             <p className={style.description}>
-              Although I’m not currently looking for any new opportunities, my
-              inbox is always open. Whether you have a question or just want to
-              say hi, I’ll try my best to get back to you!
+            I&apos;m always open to connecting! Whether you have a question, a project idea, or just want to say hello, feel free to get in touch. I&apos;ll make sure to respond as soon as possible.
             </p>
           </Grid>
           <Grid item xs={12} sm={6} sx={{ mt: { xs: 2 } }}>

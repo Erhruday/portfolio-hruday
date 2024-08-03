@@ -13,6 +13,14 @@
     cursor: pointer;
     width: 50px;
     margin-top: 15px;
+    z-index: 9999
+}
+.navbar-cross-line {
+    cursor: pointer;
+    width: 40px;
+    margin-top: 15px;
+    margin-left: 5px;
+    z-index: 9999
 }
 .nav-menu-smaller-screen {
     position: absolute;
@@ -40,7 +48,7 @@
     color: #00ffc2;
     padding: 5px 10px;
     border-radius: 5px;
-    border: 2px solid #00ffc2;
+    border: 3px solid #00ffc2;
     background-color: transparent;
     transition: all 500ms ease;
 }
@@ -85,8 +93,8 @@
     float: right;
     transform: rotate(90deg);
     position: fixed;
-    bottom: 149px;
-    right: -85px;
+    bottom: 160px;
+    right:  -102px;
     color: #c4cee9;
     transition-duration: 0.3s;
     z-index: 100;
@@ -95,8 +103,8 @@
     /* transform: translateX(-3px); */
     color: #18ffc9;
     position: fixed;
-    bottom: 155px;
-    right: -85px;
+    bottom: 166px;
+    right:  -102px;
 }
 .right-bar {
     content: '';

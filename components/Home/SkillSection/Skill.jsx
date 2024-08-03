@@ -14,7 +14,7 @@ export default function Skill() {
                     </h2>
                 </div>
                 <p className={style['description']}>
-                    Since beginning my journey as a developer nearly 1.5 years ago, I’ve done remote work and collaborated with talented people to create web
+                    Since beginning my journey as a developer nearly 3 years ago, I’ve done remote work and collaborated with talented people to create web
                     products for both business and consumer use.
                 </p>
                 <p className={style['description']}>
@@ -79,7 +79,7 @@ export default function Skill() {
                                         <p className={style['company-name']}>Tabgraf Technology LLP</p>
 
                                         <span className={style['duration']}>2022-Present</span>
-                                        <p className={style['description']}>The main area of my expertise is front-end back-end development.</p>
+                                        <p className={style['description']}>The main area of my expertise is JavaScript Full-Stack development.</p>
                                     </div>
                                 </div>
                             {/* </a> */}

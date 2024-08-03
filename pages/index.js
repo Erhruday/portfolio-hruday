@@ -9,6 +9,8 @@ import Skill from "../components/Home/SkillSection/Skill";
 // import styles from '../styles/Home.module.css';
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import  { workLists } from "../data"
+
 
 export default function Home({ data }) {
   //{ data }
@@ -39,7 +41,7 @@ export default function Home({ data }) {
       <NavBar />
       <Hero />
       <About />
-      <Portfolio />
+      <Portfolio workLists={workLists?.slice(0, 4)}/>
       <Skill />
       {
         blogData.length > 0 && 

@@ -17,14 +17,14 @@ export default function NavBar() {
       <Grid container sx={{ pr: 5, pl: { xs: 2, sm: 5 }, mt: 3 }}>
         <Grid
           item
-          xs={1}
+          xs={1.5}
           sx={{ display: { xs: "block", sm: "none", md: "none" } }}
         >
           {navbarExpandIsToggle ? (
             <img
               src={`/images/cross-line.svg`}
               alt="cross"
-              className={style["navbar-three-line"]}
+              className={style["navbar-cross-line"]}
               onClick={() => setNavbarExpandIsToggle(false)}
             />
           ) : (
@@ -38,7 +38,7 @@ export default function NavBar() {
         </Grid>
         <Grid
           item
-          xs={10}
+          xs={9}
           sm={4}
           sx={{
             display: "flex",
@@ -142,7 +142,7 @@ export default function NavBar() {
       <Box sx={{ display: { xs: "none", sm: "none", md: "block" } }}>
         <div className={style["socialmeadia-icons-container"]}>
           <Link
-            href="https://github.com/Erhruday/Hello-World"
+            href="https://github.com/Erhruday"
             target={"_blank"}
             rel="noreferrer"
             className={style.a}
@@ -175,7 +175,7 @@ export default function NavBar() {
             <Twitter dynamicClass={`${style["logo"]}`} />
           </Link>
           <Link
-            href="https://codepen.io/Erhruday/pens/showcase"
+            href="https://codepen.io/Erhruday/pens/public"
             target={"_blank"}
             rel="noreferrer"
             className={style.a}

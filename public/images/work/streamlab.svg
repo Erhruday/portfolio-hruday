@@ -1,8 +1,5 @@
-import React from 'react';
 
-function Project1({ dynamicClass }) {
-    return (
-        <svg width="482" height="321" viewBox="0 0 482 321" fill="none" xmlns="http://www.w3.org/2000/svg" className={dynamicClass}>
+        <svg width="482" height="321" viewBox="0 0 482 321" fill="none" xmlns="http://www.w3.org/2000/svg" >
             <path
                 d="M0.492684 269.701C2.62259 252.574 13.2369 235.699 29.5707 230.125C23.1291 247.754 23.1305 267.092 29.5747 284.72C32.0845 291.509 35.5831 298.799 33.2222 305.641C31.7533 309.899 28.1598 313.156 24.143 315.193C20.126 317.23 15.6679 318.2 11.2656 319.152L10.3992 319.868C3.41061 304.088 -1.63722 286.828 0.492684 269.701Z"
                 fill="#CCCCCC"
@@ -270,7 +267,3 @@ function Project1({ dynamicClass }) {
                 fill="#3F3D56"
             />
         </svg>
-    );
-}
-
-export default Project1;

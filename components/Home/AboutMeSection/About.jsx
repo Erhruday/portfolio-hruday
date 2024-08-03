@@ -15,15 +15,13 @@ export default function About() {
                     </Grid>
                     <Grid item xs={12} md={6} className={style['description-container']} sx={{ mb: { xs: 4, sm: 4, md: 0, lg: 0 } }}>
                         <p className={style['description']}>
-                            Hello! My name is Hruday and I enjoy creating things that live on the internet. My interest in web development started back in 2018
-                            when I decided to learn HTML, CSS and Java Script !
+                        Hello! My name is Hruday. I have a passion for creating dynamic and engaging web applications. My journey into web development began in 2018 when I started learning HTML, CSS, and JavaScript.
                         </p>
                         <p className={style['description']}>
-                            I also recently made a awesome website with Next JS.Interested in the entire frontend spectrum and working on ambitious projects
-                            with positive people.
+                        I have a keen interest in the entire frontend spectrum and thrive on working on ambitious projects with positive individuals.
                         </p>
                         <p className={style['description']}>
-                            Engineer by profession. A quick learner in adapting technology with ease having good interpersonal skills, well-organised person.
+                        Professionally, I am an engineer who quickly adapts to new technologies and strong interpersonal skills. I am well-organized and dedicated to continuous learning and professional growth.
                         </p>
                         <p className={style['description']}>
                             <a href="#contact-form" style={{ color: '#00ffc2' }}>
