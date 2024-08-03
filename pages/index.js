@@ -41,7 +41,7 @@ export default function Home({ data }) {
       <NavBar />
       <Hero />
       <About />
-      <Portfolio workLists={workLists?.slice(0, 4)}/>
+      <Portfolio workLists={workLists?.slice(0, 4)} location = "section"/>
       <Skill />
       {
         blogData.length > 0 && 

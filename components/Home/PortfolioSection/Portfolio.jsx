@@ -9,7 +9,7 @@ import Box from "@mui/material/Box";
 import NewsSVG from "../../Common/SVGS/Projects/NewsSVG";
 import { convertToKebabCase } from "../../../Utilities";
 
-export default function Portfolio({workLists}) {
+export default function Portfolio({ workLists, location }) {
   return (
     <div className={style["portfolio-wrapper"]}>
       <span className={style.bg}>Work</span>
@@ -31,8 +31,8 @@ export default function Portfolio({workLists}) {
                 alignItems: "center",
                 justifyContent: "center",
                 flexDirection: `${i % 2 == 0 ? "row" : "row-reverse"}`,
-                mt:8,
-                mb:8
+                mt: 8,
+                mb: 8,
               }}
             >
               <Grid
@@ -77,19 +77,19 @@ export default function Portfolio({workLists}) {
             </Grid>
           );
         })}
-       
 
-        <Link href={`/work`}>
-          <span className={`${style["porfolio-btn"]} btn`}>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            See&nbsp;More!
-          </span>
-        </Link>
+        {location == "section" && (
+          <Link href={`/work`}>
+            <span className={`${style["porfolio-btn"]} btn`}>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              See&nbsp;More!
+            </span>
+          </Link>
+        )}
       </Container>
     </div>
   );
 }
-

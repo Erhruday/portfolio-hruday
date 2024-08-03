@@ -14,7 +14,7 @@ export default function work() {
                 <meta property="og:title" content="My work Page title" key="title" />
             </Head>
             <NavBar />
-            <Portfolio workLists={workLists}/>
+            <Portfolio workLists={workLists} location="page"/>
             <Footer />
         </div>
     );
