@@ -100,7 +100,7 @@ export default function NavBar() {
             justifyContent: "center",
           }}
         >
-          <a href={`/images/resume-hruday.pdf`} download="resume-hruday">
+          <a href={`/images/resume-hruday-ranjan.pdf`} download="resume-hruday">
             <button className={style["btn-resume"]}>Resume</button>
           </a>
         </Grid>
